@@ -140,7 +140,17 @@
       transform: translateY(-7px) rotate(-45deg);
     }
 
-    section { padding: 78px 0; }
+    section {
+      padding: 72px 0;
+    }
+
+    section:not(.hero):not(#bio) {
+      border-bottom: 1px solid var(--border);
+    }
+
+    section#contact {
+      border-bottom: none;
+    }
 
     h1, h2, h3 { font-weight: 800; letter-spacing: -0.5px; }
     h1 { font-size: clamp(2.2rem, 4vw, 3.4rem); line-height: 1.1; }
@@ -310,7 +320,7 @@
       background: rgba(18,18,18,0.82);
       border: 1px solid var(--border);
       border-radius: 16px;
-      padding: 18px;
+      padding: 22px;
       box-shadow: 0 14px 40px rgba(0,0,0,0.35);
     }
 
@@ -318,13 +328,38 @@
 
     .section-head {
       display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 14px;
-      margin-bottom: 18px;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 12px;
+      margin-bottom: 32px;
     }
 
-    .section-head p { margin: 0; max-width: 720px; }
+    .section-head > div { width: 100%; }
+    .section-head h2 { margin-bottom: 0; }
+    .section-head p { margin: 0; max-width: 640px; margin-left: auto; margin-right: auto; line-height: 1.65; }
+
+    /* Section CTAs (e.g. Releases streaming links) centered below intro */
+    .section-head .cta { justify-content: center; margin-top: 4px; }
+
+    /* Cards: clearer hierarchy and spacing */
+    .card h3 {
+      color: var(--text);
+      margin-bottom: 10px;
+      font-size: 1.08rem;
+    }
+
+    .card p.small {
+      line-height: 1.65;
+      margin-bottom: 0;
+    }
+
+    .card .list { margin-top: 12px; }
+
+    /* Subsection titles inside cards (e.g. Releases blocks) */
+    .card-grid { margin-top: 16px; }
+    .embed-gap { height: 12px; }
+    .card-gap { height: 14px; }
 
     #bio {
       text-align: center;
@@ -383,8 +418,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
-      padding: 12px 14px;
+      gap: 14px;
+      padding: 14px 16px;
       border: 1px solid rgba(255,255,255,0.08);
       background: rgba(255,255,255,0.03);
       border-radius: 14px;
@@ -624,7 +659,7 @@
         <div class="grid">
           <div class="card col-12">
             <h3>Latest / Featured</h3>
-            <div class="grid" style="margin-top:12px">
+            <div class="grid card-grid">
               <div class="col-6">
                 <iframe class="embed spotify" src="https://open.spotify.com/embed/track/2NgY57feqYSDVqUQTbMZsR" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="H4PPY"></iframe>
               </div>
@@ -636,7 +671,7 @@
 
           <div class="card col-12">
             <h3>Apurba Releases (2025)</h3>
-            <div class="grid" style="margin-top:12px">
+            <div class="grid card-grid">
               <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/4OLEXwh1PwcMz3FgNjRZv7" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Trance by 3"></iframe></div>
               <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/1nsJ7poGS2qorT2zkz9Vep" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Progress!ve"></iframe></div>
               <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/79OCi8HEMhdD105OJ2LKYi" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="VOID"></iframe></div>
@@ -647,7 +682,7 @@
 
           <div class="card col-12">
             <h3>Other Aliases Releases</h3>
-            <div class="grid" style="margin-top:12px">
+            <div class="grid card-grid">
               <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/0fsEdGyTJdT4vaZOxTXJZt" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="VIVID"></iframe></div>
               <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/2xj37z12eieGVAECp3nzbi" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Flow"></iframe></div>
               <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/3RWEah4dI7Y9CyiZwBhUz6" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Golden Hour"></iframe></div>
@@ -684,7 +719,7 @@
           <div class="card col-8">
             <h3>Remix</h3>
             <iframe class="embed yt" src="https://www.youtube.com/embed/om5QGreRaYg" title="Nitol Paye Electric (Remix)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-            <div style="height:10px"></div>
+            <div class="embed-gap"></div>
             <iframe class="embed yt" src="https://www.youtube.com/embed/p_JortMUAI0" title="Hypnotic (Unofficial Remix)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
           </div>
 
@@ -698,7 +733,7 @@
 
           <div class="card col-12">
             <h3>Live Mixes (YouTube)</h3>
-            <div class="grid" style="margin-top:12px">
+            <div class="grid card-grid">
               <div class="col-6">
                 <iframe class="embed yt" src="https://www.youtube.com/embed/207WAnS77z0" title="Festival Vibe Melodic Bass House Mix | Mixtape01 by ZALVIX" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
               </div>
@@ -746,7 +781,7 @@
           <div class="card col-6">
             <h3>Sound & positioning</h3>
             <p class="small">Underground electronic music informed by rave culture, melodic tension, and long‑form structure. Prioritizes system translation, DJ usability, and emotional continuity over algorithm‑driven formats.</p>
-            <div style="height:12px"></div>
+            <div class="card-gap"></div>
             <div class="list">
               <div class="item"><div><strong>Designed for</strong><br><span>clubs, festivals, long DJ sets, deep listening</span></div><div class="pill">functional</div></div>
               <div class="item"><div><strong>Set formats</strong><br><span>DJ set / extended set / collaborative sessions</span></div><div class="pill">flexible</div></div>
@@ -757,7 +792,7 @@
           <div class="card col-6">
             <h3>What collaborators should expect</h3>
             <p class="small">Clear communication, realistic timelines, shared creative intent, and respect for process. Collaborations are approached as long‑term relationships, not one‑off transactions.</p>
-            <div class="list" style="margin-top:12px">
+            <div class="list">
               <div class="item"><div><strong>Artists</strong><br><span>open to co‑production, remixing, and concept work</span></div><div class="pill">aligned</div></div>
               <div class="item"><div><strong>DJs</strong><br><span>free downloads and DJ‑friendly material</span></div><div class="pill">usable</div></div>
               <div class="item"><div><strong>Promoters</strong><br><span>structured sets, dependable delivery</span></div><div class="pill">professional</div></div>
