@@ -150,15 +150,81 @@
     p { color: var(--muted); max-width: 860px; }
 
     .hero {
-      padding: 84px 0 54px;
+      padding: 100px 0 80px;
       border-bottom: 1px solid var(--border);
+      text-align: center;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 34px;
-      align-items: start;
+    .hero .wrap {
+      max-width: 640px;
+    }
+
+    .hero-name {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .hero-name a {
+      color: inherit;
+    }
+
+    .hero-role {
+      font-size: 1rem;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 20px;
+    }
+
+    .hero-tagline {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 32px;
+    }
+
+    .hero-social {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .hero-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.05);
+      color: var(--muted);
+      transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+    }
+
+    .hero-social a:hover {
+      color: var(--text);
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.15);
+      transform: translateY(-2px);
+    }
+
+    .hero-social a svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
     }
 
     .tagline {
@@ -337,7 +403,9 @@
     }
 
     @media (max-width: 880px) {
-      .hero-grid { grid-template-columns: 1fr; }
+      .hero { padding: 72px 0 56px; }
+      .hero-social a { width: 44px; height: 44px; }
+      .hero-social a svg { width: 20px; height: 20px; }
       .col-3, .col-4, .col-6, .col-8 { grid-column: span 12; }
       .nav .navlinks { display: none; }
       .menu-toggle { display: flex; }
@@ -350,6 +418,8 @@
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       .btn { transition: none; }
+      .hero-social a { transition: none; }
+      .hero-social a:hover { transform: none; }
     }
   </style>
 </head>
@@ -391,39 +461,28 @@
   <main>
     <section class="hero" id="top">
       <div class="wrap">
-        <div class="hero-grid">
-          <div>
-            <h1>Underground electronic music with full creative control.</h1>
-            <p class="tagline">Electronic music artist, DJ, and audio engineer from Bangladesh working independently across production, performance, and curation. Built for real dance floors, long‑form listening, and long‑term collaboration — not short‑term hype.</p>
+        <h1 class="hero-name"><a href="#top">Khalid Bin Alam</a></h1>
+        <p class="hero-role">Music Producer · DJ · Audio Engineer</p>
+        <p class="hero-tagline">Underground electronic music from Bangladesh. Production, DJ sets, and curation built for real dance floors and long‑form listening.</p>
 
-            <div class="chips" aria-label="Key roles">
-              <div class="chip">Music Production</div>
-              <div class="chip">DJ Sets</div>
-              <div class="chip">Mixing & Mastering</div>
-              <div class="chip">Playlist Curation</div>
-              <div class="chip">Music Journalism</div>
-              <div class="chip">Community Building</div>
-            </div>
+        <div class="hero-social" aria-label="Social and streaming links">
+          <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+          </a>
+          <a href="https://soundcloud.com/youmeiyou" target="_blank" rel="noopener noreferrer" aria-label="SoundCloud">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c-.009-.054-.049-.1-.099-.1m-.899.898c-.06 0-.105.045-.112.102l-.167 1.257.167 1.203c.007.061.052.108.112.108.058 0 .104-.047.111-.108l.182-1.203-.182-1.257c-.007-.057-.053-.102-.111-.102m1.782-2.473c-.075 0-.136.06-.143.137l-.212 2.383.212 2.307c.007.077.068.138.143.138.074 0 .135-.061.142-.138l.235-2.307-.235-2.383c-.007-.077-.068-.137-.142-.137m.899-.449c-.068 0-.123.056-.13.124l-.199 1.772.199 1.648c.007.072.062.128.13.128.066 0 .121-.056.129-.128l.221-1.648-.221-1.772c-.008-.068-.063-.124-.129-.124m.898-.09c-.065 0-.119.053-.127.118l-.187 1.602.187 1.489c.008.069.062.124.127.124.064 0 .117-.055.125-.124l.208-1.489-.208-1.602c-.008-.065-.061-.118-.125-.118m14.246 1.439c-.646-.033-1.277.166-1.807.576-.021-.001-.042-.003-.063-.003-.622 0-1.189.36-1.452.921-.263-.552-.826-.918-1.415-.918-.033 0-.065.003-.097.006-.263-.552-.826-.918-1.415-.918-.622 0-1.152.378-1.381.91-.23-.532-.759-.91-1.381-.91-2.392 0-4.078 2.167-4.078 4.078 0 .061.006.121.013.181-.007-.001-.013-.003-.02-.003-.622 0-1.127.505-1.127 1.127v6.294c0 .622.505 1.127 1.127 1.127h12.539c2.783 0 5.039-2.256 5.039-5.039.001-2.589-1.957-4.717-4.453-5.004"/></svg>
+          </a>
+          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="https://linktr.ee/youmeiyou" target="_blank" rel="noopener noreferrer" aria-label="All links (Linktree)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.953 15.066c-.08.163-.08.324-.08.486.08.162.08.324-.08.486l-.892 1.135c-.08.162-.244.324-.407.324H4.215c-.163 0-.244-.162-.244-.324v-6.756c0-.163.08-.324.244-.324h2.357c.163 0 .244.162.244.324v4.378l2.117-2.753c.163-.162.327-.162.49 0zm3.382-5.595c-.082 0-.163.08-.245.162l-3.502 4.378v-4.378c0-.163-.08-.324-.244-.324H5.352c-.163 0-.244.162-.244.324v6.756c0 .163.08.324.244.324h2.357c.163 0 .244-.162.244-.324v-1.459l.898-1.135 2.606 3.328c.08.162.244.324.407.324h2.604c.163 0 .327-.08.407-.244.08-.163.08-.405-.08-.567l-3.91-4.702 3.502-4.378c.163-.162.163-.405.08-.567-.08-.162-.244-.244-.407-.244h-2.604c-.163 0-.327.08-.407.162zM20.925 9.27h-2.357c-.163 0-.244.162-.244.324v1.946l-2.117-2.753c-.08-.162-.244-.162-.407 0-.08.162-.08.324-.08.486v6.756c0 .163.08.324.244.324h2.357c.163 0 .244-.162.244-.324v-4.378l2.117 2.753c.08.162.244.162.407 0 .08-.162.08-.324.08-.486V9.594c0-.162-.08-.324-.244-.324z"/></svg>
+          </a>
+        </div>
 
-            <div class="cta">
-              <a class="btn primary" href="#releases">Listen (Embeds)</a>
-              <a class="btn" href="#contact">Bookings / Press</a>
-              <a class="btn" href="https://linktr.ee/youmeiyou" target="_blank" rel="noopener">All Links (Linktree)</a>
-              <a class="btn" href="assets/KhalidBinAlam_DJ_Pack.mp3" download>Free MP3 Download</a>
-            </div>
-
-            <div class="note">MP3 download button expects a file at <span style="color:#d8d8d8">/assets/KhalidBinAlam_DJ_Pack.mp3</span>. Upload your DJ pack/track there on your hosting (Netlify/Vercel/cPanel) and it will work instantly.</div>
-          </div>
-
-          <aside class="panel" aria-label="Quick facts">
-            <div class="kv">
-              <div class="row"><div class="k">Location</div><div class="v">Bangladesh</div></div>
-              <div class="row"><div class="k">Primary Focus</div><div class="v">Underground electronic / rave culture</div></div>
-              <div class="row"><div class="k">Works As</div><div class="v">Solo full‑stack creator</div></div>
-              <div class="row"><div class="k">Main Artist Hub</div><div class="v"><a href="https://linktr.ee/youmeiyou" target="_blank" rel="noopener">linktr.ee/youmeiyou</a></div></div>
-              <div class="row"><div class="k">Professional Links</div><div class="v"><a href="https://linktr.ee/khalidbinalam" target="_blank" rel="noopener">linktr.ee/khalidbinalam</a></div></div>
-            </div>
-          </aside>
+        <div class="hero-cta">
+          <a class="btn primary" href="#releases">Listen</a>
+          <a class="btn" href="#contact">Bookings &amp; Press</a>
         </div>
       </div>
     </section>
