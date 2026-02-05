@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khalid Bin Alam | One‑Page EPK</title>
+  <meta name="description" content="Khalid Bin Alam is an independent electronic music artist, producer, DJ, audio engineer, curator, and ecosystem builder from Bangladesh. One‑page EPK with embeds and download." />
+  <meta property="og:title" content="Khalid Bin Alam | One‑Page EPK" />
+  <meta property="og:description" content="Independent electronic music artist (Apurba / Zalvix / Luminous Lullabies / Euphonic). Music, videos, mixes, press kit, and contact." />
+  <meta name="theme-color" content="#0b0b0b" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0b0b0b;
+      --panel: #121212;
+      --panel2: #0f0f0f;
+      --text: #eaeaea;
+      --muted: #bdbdbd;
+      --soft: #8b8b8b;
+      --accent: #9ae6b4;
+      --accent2: #7dd3fc;
+      --border: rgba(255,255,255,0.08);
+      --shadow: 0 20px 60px rgba(0,0,0,0.45);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(1200px 700px at 20% 10%, rgba(154,230,180,0.08), transparent 60%),
+                  radial-gradient(900px 600px at 90% 20%, rgba(125,211,252,0.06), transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      letter-spacing: 0.1px;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { opacity: 0.9; }
+
+    .wrap { width: min(1180px, 90vw); margin: 0 auto; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(14px);
+      background: rgba(11,11,11,0.7);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      line-height: 1.2;
+    }
+
+    .brand strong { font-weight: 800; font-size: 0.98rem; }
+    .brand span { font-size: 0.82rem; color: var(--soft); }
+
+    .navlinks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: flex-end;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .navlinks a { color: var(--muted); padding: 6px 10px; border-radius: 10px; }
+    .navlinks a:hover { background: rgba(255,255,255,0.06); }
+
+    section { padding: 78px 0; }
+
+    h1, h2, h3 { font-weight: 800; letter-spacing: -0.5px; }
+    h1 { font-size: clamp(2.2rem, 4vw, 3.4rem); line-height: 1.1; }
+    h2 { font-size: clamp(1.5rem, 2.2vw, 2.2rem); margin-bottom: 14px; }
+    h3 { font-size: 1.1rem; margin-bottom: 8px; }
+
+    p { color: var(--muted); max-width: 860px; }
+
+    .hero {
+      padding: 84px 0 54px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .tagline {
+      margin-top: 14px;
+      font-size: 1.06rem;
+      color: var(--muted);
+      max-width: 880px;
+    }
+
+    .chips { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip {
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+      border-radius: 999px;
+      font-size: 0.86rem;
+      color: #d8d8d8;
+    }
+
+    .cta {
+      margin-top: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: transform 0.12s ease, background 0.12s ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); background: rgba(255,255,255,0.08); }
+
+    .btn.primary {
+      background: linear-gradient(135deg, rgba(154,230,180,0.22), rgba(125,211,252,0.14));
+      border: 1px solid rgba(154,230,180,0.28);
+    }
+
+    .note {
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: var(--soft);
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.03));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .kv { display: grid; gap: 10px; }
+    .kv .row { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .kv .row:last-child { border-bottom: 0; }
+    .kv .k { color: var(--soft); font-size: 0.92rem; }
+    .kv .v { color: #dedede; font-weight: 600; font-size: 0.92rem; text-align: right; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .col-6 { grid-column: span 6; }
+    .col-4 { grid-column: span 4; }
+    .col-8 { grid-column: span 8; }
+    .col-12 { grid-column: span 12; }
+
+    .card {
+      background: rgba(18,18,18,0.82);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+    }
+
+    .muted { color: var(--muted); }
+
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .section-head p { margin: 0; max-width: 720px; }
+
+    .embed {
+      width: 100%;
+      border: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .spotify { height: 152px; }
+    .spotify-tall { height: 380px; }
+    .yt { aspect-ratio: 16 / 9; }
+
+    .list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 14px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+      border-radius: 14px;
+    }
+
+    .item strong { font-size: 0.96rem; }
+    .item span { color: var(--soft); font-size: 0.86rem; }
+
+    .pill {
+      font-size: 0.82rem;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.04);
+      color: #e8e8e8;
+      white-space: nowrap;
+    }
+
+    footer {
+      padding: 40px 0 60px;
+      border-top: 1px solid var(--border);
+      color: var(--soft);
+      font-size: 0.9rem;
+    }
+
+    .small { font-size: 0.92rem; }
+
+    @media (max-width: 980px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .col-6, .col-4, .col-8 { grid-column: span 12; }
+      .navlinks { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn { transition: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <div class="nav">
+        <div class="brand">
+          <strong>Khalid Bin Alam</strong>
+          <span>One‑Page EPK / Artist Hub</span>
+        </div>
+        <nav class="navlinks" aria-label="Primary">
+          <a href="#bio">Bio</a>
+          <a href="#projects">Projects</a>
+          <a href="#releases">Releases</a>
+          <a href="#videos">Remixes & Mixes</a>
+          <a href="#epk">EPK</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div>
+            <h1>Underground electronic music with full creative control.</h1>
+            <p class="tagline">Electronic music artist, DJ, and audio engineer from Bangladesh working independently across production, performance, and curation. Built for real dance floors, long‑form listening, and long‑term collaboration — not short‑term hype.</p>
+
+            <div class="chips" aria-label="Key roles">
+              <div class="chip">Music Production</div>
+              <div class="chip">DJ Sets</div>
+              <div class="chip">Mixing & Mastering</div>
+              <div class="chip">Playlist Curation</div>
+              <div class="chip">Music Journalism</div>
+              <div class="chip">Community Building</div>
+            </div>
+
+            <div class="cta">
+              <a class="btn primary" href="#releases">Listen (Embeds)</a>
+              <a class="btn" href="#contact">Bookings / Press</a>
+              <a class="btn" href="https://linktr.ee/youmeiyou" target="_blank" rel="noopener">All Links (Linktree)</a>
+              <a class="btn" href="assets/KhalidBinAlam_DJ_Pack.mp3" download>Free MP3 Download</a>
+            </div>
+
+            <div class="note">MP3 download button expects a file at <span style="color:#d8d8d8">/assets/KhalidBinAlam_DJ_Pack.mp3</span>. Upload your DJ pack/track there on your hosting (Netlify/Vercel/cPanel) and it will work instantly.</div>
+          </div>
+
+          <aside class="panel" aria-label="Quick facts">
+            <div class="kv">
+              <div class="row"><div class="k">Location</div><div class="v">Bangladesh</div></div>
+              <div class="row"><div class="k">Primary Focus</div><div class="v">Underground electronic / rave culture</div></div>
+              <div class="row"><div class="k">Works As</div><div class="v">Solo full‑stack creator</div></div>
+              <div class="row"><div class="k">Main Artist Hub</div><div class="v"><a href="https://linktr.ee/youmeiyou" target="_blank" rel="noopener">linktr.ee/youmeiyou</a></div></div>
+              <div class="row"><div class="k">Professional Links</div><div class="v"><a href="https://linktr.ee/khalidbinalam" target="_blank" rel="noopener">linktr.ee/khalidbinalam</a></div></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="bio">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Bio</h2>
+            <p>Khalid Bin Alam is an independent electronic music artist and DJ whose work sits at the intersection of underground club culture, melodic progression, and experimental sound design. His focus is not volume or trend‑chasing, but depth, functionality, and musical honesty.</p>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="card col-6">
+            <h3>How the work is approached</h3>
+            <p class="small">Every track and set is produced, mixed, and tested with real systems and real rooms in mind. The goal is flow, tension, and emotional continuity — music that DJs can trust and audiences can stay inside.</p>
+          </div>
+          <div class="card col-6">
+            <h3>Why everything is solo</h3>
+            <p class="small">Working independently allows full control over sound quality, delivery, communication, and creative direction. It keeps collaboration clear, timelines realistic, and the vision uncompromised.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="identity">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Identity & Core Position</h2>
+            <p>Khalid Bin Alam (অপূর্ব) operates at the intersection of artistry, engineering, and infrastructure. His work treats electronic music not as disposable content, but as a long‑term cultural system built on integrity, clarity, and sustainability.</p>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="card col-6">
+            <h3>How the practice is defined</h3>
+            <p class="small">The career is shaped by systems thinking rather than isolated releases. Creative output, technical execution, and ecosystem awareness are developed together, allowing consistency across projects and platforms.</p>
+          </div>
+          <div class="card col-6">
+            <h3>Working globally, rooted locally</h3>
+            <p class="small">Based in Bangladesh while operating globally, Khalid’s work reflects regional identity without limiting international relevance or sonic vocabulary.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Projects & Aliases</h2>
+            <p>Multiple projects exist to protect creative clarity — not to fragment identity. Each alias serves a different musical and emotional function.</p>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="card col-3 col-12">
+            <h3>অপূর্ব (Apurba)</h3>
+            <p class="small">Raw, underground, rave‑oriented material focused on rhythm, pressure, and immersive club movement.</p>
+          </div>
+          <div class="card col-3 col-12">
+            <h3>Zalvix</h3>
+            <p class="small">Melodic and forward‑leaning electronic music built for progression, groove, and extended DJ sets.</p>
+          </div>
+          <div class="card col-3 col-12">
+            <h3>Luminous Lullabies</h3>
+            <p class="small">Atmospheric and emotional sound design exploring space, texture, and reflective listening.</p>
+          </div>
+          <div class="card col-3 col-12">
+            <h3>Euphonic</h3>
+            <p class="small">An open research space for genre‑agnostic experiments, sketches, and sonic studies.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="philosophy">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Artistic Philosophy</h2>
+            <p>Electronic music is approached as architecture rather than entertainment — built to shape emotional space, not to chase attention.</p>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="card col-12">
+            <div class="list">
+              <div class="item"><div><strong>Emotional space</strong><br><span>sound exists to support atmosphere and feeling</span></div><div class="pill">intentional</div></div>
+              <div class="item"><div><strong>Restraint</strong><br><span>atmosphere over density, clarity over excess</span></div><div class="pill">disciplined</div></div>
+              <div class="item"><div><strong>Longevity</strong><br><span>long‑form listening outlasts trends</span></div><div class="pill">durable</div></div>
+              <div class="item"><div><strong>Honesty</strong><br><span>sonic clarity reflects artistic integrity</span></div><div class="pill">authentic</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="releases">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Releases</h2>
+            <p>All embeds below are pulled from the official release links listed on the artist Linktree. (Spotify embeds work globally; if Spotify is blocked in a region, use the Linktree buttons.)</p>
+          </div>
+          <div class="cta" style="margin:0">
+            <a class="btn" href="https://open.spotify.com" target="_blank" rel="noopener">Spotify</a>
+            <a class="btn" href="https://music.apple.com" target="_blank" rel="noopener">Apple Music</a>
+            <a class="btn" href="https://soundcloud.com/youmeiyou" target="_blank" rel="noopener">SoundCloud</a>
+            <a class="btn" href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="card col-12">
+            <h3>Latest / Featured</h3>
+            <div class="grid" style="margin-top:12px">
+              <div class="col-6">
+                <iframe class="embed spotify" src="https://open.spotify.com/embed/track/2NgY57feqYSDVqUQTbMZsR" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="H4PPY"></iframe>
+              </div>
+              <div class="col-6">
+                <iframe class="embed spotify" src="https://open.spotify.com/embed/album/6wNfZrP6Xgx19753ppoOy3" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="London Love (Compilation)"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-12">
+            <h3>Apurba Releases (2025)</h3>
+            <div class="grid" style="margin-top:12px">
+              <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/4OLEXwh1PwcMz3FgNjRZv7" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Trance by 3"></iframe></div>
+              <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/1nsJ7poGS2qorT2zkz9Vep" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Progress!ve"></iframe></div>
+              <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/79OCi8HEMhdD105OJ2LKYi" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="VOID"></iframe></div>
+              <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/1qDaML7JOjR84zWEuOHjDS" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Opening"></iframe></div>
+              <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/5sRq9z2kDTxlSKjOm5zNdE" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="PsyEcho"></iframe></div>
+            </div>
+          </div>
+
+          <div class="card col-12">
+            <h3>Other Aliases Releases</h3>
+            <div class="grid" style="margin-top:12px">
+              <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/0fsEdGyTJdT4vaZOxTXJZt" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="VIVID"></iframe></div>
+              <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/2xj37z12eieGVAECp3nzbi" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Flow"></iframe></div>
+              <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/3RWEah4dI7Y9CyiZwBhUz6" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Golden Hour"></iframe></div>
+              <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/3SlEIHHvEVLdiWuzQfEaNG" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Watching dreams together."></iframe></div>
+              <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/0J439mT1BYdUtLZPm6LeWp" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="August."></iframe></div>
+              <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/7j1NjjEqnduyCIynHCnadf" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Colors"></iframe></div>
+              <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/0CB22NoA65NnfSVilPosG4" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="2 Days"></iframe></div>
+              <div class="col-6">
+                <div class="item">
+                  <div>
+                    <strong>Wrong Turn (Fan Link)</strong><br />
+                    <span>Multi‑platform link (Apple Music / Amazon / Tidal)</span>
+                  </div>
+                  <a class="pill" href="https://push.fm/fl/WsGknoy1" target="_blank" rel="noopener">Open</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="videos">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Remixes & Live Mixes</h2>
+            <p>Selected remixes and mixes listed on the official Linktree. YouTube embeds below; SoundCloud mix included as a player.</p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="card col-8">
+            <h3>Remix</h3>
+            <iframe class="embed yt" src="https://www.youtube.com/embed/om5QGreRaYg" title="Nitol Paye Electric (Remix)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            <div style="height:10px"></div>
+            <iframe class="embed yt" src="https://www.youtube.com/embed/p_JortMUAI0" title="Hypnotic (Unofficial Remix)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div class="card col-4">
+            <h3>SoundCloud Mix</h3>
+            <p class="small">Pre‑mixed set by Zalvix (Qbic Pulse). If your SoundCloud embed is blocked in some browsers, open it directly.</p>
+            <iframe class="embed" style="height: 340px" scrolling="no" frameborder="no" allow="autoplay" loading="lazy"
+              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/zalvix/a-demo-mixtape-by-zalvix-qbic-pulse/s-mia8I9hjiPT&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+            </iframe>
+          </div>
+
+          <div class="card col-12">
+            <h3>Live Mixes (YouTube)</h3>
+            <div class="grid" style="margin-top:12px">
+              <div class="col-6">
+                <iframe class="embed yt" src="https://www.youtube.com/embed/207WAnS77z0" title="Festival Vibe Melodic Bass House Mix | Mixtape01 by ZALVIX" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="col-6">
+                <iframe class="embed yt" src="https://www.youtube.com/embed/PtE_IO8edj0" title="Emotional Deep House Mashup" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="engineering">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Audio Engineering Practice</h2>
+            <p>Engineering is treated as an extension of artistic responsibility, not a detached service.</p>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="card col-12">
+            <div class="list">
+              <div class="item"><div><strong>System translation</strong><br><span>consistent results across headphones, clubs, and PA systems</span></div><div class="pill">reliable</div></div>
+              <div class="item"><div><strong>Dynamics</strong><br><span>controlled energy without loudness fatigue</span></div><div class="pill">balanced</div></div>
+              <div class="item"><div><strong>Spatial balance</strong><br><span>depth and separation tailored to genre context</span></div><div class="pill">precise</div></div>
+              <div class="item"><div><strong>Longevity focus</strong><br><span>engineering choices built for long‑term catalog value</span></div><div class="pill">sustainable</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="epk">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>EPK</h2>
+            <p>This page is designed for DJs, promoters, curators, and collaborators who need clarity quickly — what the sound is, how it works in real contexts, and how collaboration happens.</p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="card col-6">
+            <h3>Sound & positioning</h3>
+            <p class="small">Underground electronic music informed by rave culture, melodic tension, and long‑form structure. Prioritizes system translation, DJ usability, and emotional continuity over algorithm‑driven formats.</p>
+            <div style="height:12px"></div>
+            <div class="list">
+              <div class="item"><div><strong>Designed for</strong><br><span>clubs, festivals, long DJ sets, deep listening</span></div><div class="pill">functional</div></div>
+              <div class="item"><div><strong>Set formats</strong><br><span>DJ set / extended set / collaborative sessions</span></div><div class="pill">flexible</div></div>
+              <div class="item"><div><strong>Workflow</strong><br><span>solo: production → mix → master → release</span></div><div class="pill">reliable</div></div>
+            </div>
+          </div>
+
+          <div class="card col-6">
+            <h3>What collaborators should expect</h3>
+            <p class="small">Clear communication, realistic timelines, shared creative intent, and respect for process. Collaborations are approached as long‑term relationships, not one‑off transactions.</p>
+            <div class="list" style="margin-top:12px">
+              <div class="item"><div><strong>Artists</strong><br><span>open to co‑production, remixing, and concept work</span></div><div class="pill">aligned</div></div>
+              <div class="item"><div><strong>DJs</strong><br><span>free downloads and DJ‑friendly material</span></div><div class="pill">usable</div></div>
+              <div class="item"><div><strong>Promoters</strong><br><span>structured sets, dependable delivery</span></div><div class="pill">professional</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ecosystem">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Industry & Ecosystem Work</h2>
+            <p>Beyond individual releases, Khalid actively builds and maintains infrastructure for discovery, curation, and sustainable artist growth.</p>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="card col-6">
+            <h3>PlayLSD — Founder</h3>
+            <p class="small">An independent electronic music curation ecosystem focused on long‑form listening, taste‑driven discovery, and early‑stage artist exposure. PlayLSD prioritizes ecosystem health over transactional promotion.</p>
+          </div>
+          <div class="card col-6">
+            <h3>Industry knowledge base</h3>
+            <p class="small">Active understanding of playlist mechanics, metadata behavior, catalog positioning, and long‑term branding separation — enabling effective collaboration without external management layers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Contact</h2>
+            <p>Bookings, collaborations, press, label/playlist outreach. Use the official contact routes below (keep everything centralized).</p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="card col-6">
+            <h3>Fastest</h3>
+            <p class="small">Use the Linktree contact routes and social links for the quickest response.</p>
+            <div class="cta">
+              <a class="btn primary" href="https://linktr.ee/khalidbinalam" target="_blank" rel="noopener">Open Professional Linktree</a>
+              <a class="btn" href="https://linktr.ee/youmeiyou" target="_blank" rel="noopener">Open Artist Linktree</a>
+            </div>
+          </div>
+
+          <div class="card col-6">
+            <h3>For promoters / press</h3>
+            <p class="small">If you’re booking a set, include date, city, venue/festival name, set length, and equipment details. If you’re press, include deadline and story angle.</p>
+            <div class="note">Tip: add a direct email address here when you want the site to capture bookings without sending people to Linktree.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap">
+        <div>© <span id="y"></span> Khalid Bin Alam — Independent Electronic Music</div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap">
+          <a href="#top">Back to top</a>
+          <span style="color:rgba(255,255,255,0.18)">•</span>
+          <a href="https://linktr.ee/youmeiyou" target="_blank" rel="noopener">Music Links</a>
+          <span style="color:rgba(255,255,255,0.18)">•</span>
+          <a href="https://linktr.ee/khalidbinalam" target="_blank" rel="noopener">Professional</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
