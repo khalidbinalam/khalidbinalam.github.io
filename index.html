@@ -56,22 +56,23 @@
     .nav {
       display: flex;
       align-items: center;
-      justify-content: space-between;
       padding: 14px 0;
       gap: 16px;
     }
 
+    .nav-spacer { flex: 1; min-width: 0; }
+
     .brand {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      line-height: 1.2;
+      flex-shrink: 0;
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: -0.02em;
     }
 
-    .brand strong { font-weight: 800; font-size: 0.98rem; }
-    .brand span { font-size: 0.82rem; color: var(--soft); }
+    .brand a { color: var(--text); }
 
     .navlinks {
+      flex: 1;
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
@@ -257,6 +258,8 @@
       .hero-grid { grid-template-columns: 1fr; }
       .col-6, .col-4, .col-8 { grid-column: span 12; }
       .navlinks { display: none; }
+      .nav-spacer { display: none; }
+      .nav { justify-content: center; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -270,9 +273,9 @@
   <header>
     <div class="wrap">
       <div class="nav">
+        <div class="nav-spacer" aria-hidden="true"></div>
         <div class="brand">
-          <strong>Khalid Bin Alam</strong>
-          <span>One‑Page EPK / Artist Hub</span>
+          <a href="#top">Khalid Bin Alam</a>
         </div>
         <nav class="navlinks" aria-label="Primary">
           <a href="#bio">Bio</a>
