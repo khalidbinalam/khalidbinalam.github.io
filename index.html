@@ -3,25 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Khalid Bin Alam | EPK</title>
-  <meta name="description" content="Official EPK for Khalid Bin Alam - Electronic Music Artist, Producer, & Audio Engineer." />
+  <title>Khalid Bin Alam | Professional Profile & EPK</title>
+  <meta name="description" content="Official professional profile of Khalid Bin Alam (অপূর্ব). Electronic music producer, audio engineer, and founder of PlayLSD." />
   
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #0b0b0b;
-      --panel: #141414;
-      --text: #eeeeee;
-      --muted: #a0a0a0;
-      --accent: #9ae6b4; /* Emerald tint */
-      --accent2: #7dd3fc; /* Sky tint */
-      --border: rgba(255, 255, 255, 0.08);
-      --glass: rgba(18, 18, 18, 0.75);
-      --header-h: 70px;
-      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --bg: #050505;
+      --panel-bg: #0f0f0f;
+      --panel-border: rgba(255, 255, 255, 0.08);
+      --accent: #a7f3d0; /* Soft Emerald / Engineering Green */
+      --text-main: #ffffff;
+      --text-muted: #888888;
+      --header-height: 70px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -29,53 +28,50 @@
     
     body {
       font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      background-image: 
-        radial-gradient(at 0% 0%, rgba(154, 230, 180, 0.05) 0px, transparent 50%),
-        radial-gradient(at 100% 0%, rgba(125, 211, 252, 0.05) 0px, transparent 50%);
-      color: var(--text);
+      background-color: var(--bg);
+      color: var(--text-main);
       line-height: 1.6;
-      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .wrap { width: min(1200px, 90vw); margin: 0 auto; }
+    .container { width: min(1200px, 90vw); margin: 0 auto; }
 
-    /* --- Navigation --- */
+    /* --- Header & Nav --- */
     header {
       position: fixed;
-      top: 0; left: 0; right: 0;
-      height: var(--header-h);
-      background: var(--glass);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
+      top: 0; left: 0; width: 100%;
+      height: var(--header-height);
+      background: rgba(5, 5, 5, 0.8);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--panel-border);
       z-index: 1000;
     }
 
-    .nav-container {
+    nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
       height: 100%;
     }
 
-    .brand { font-weight: 800; font-size: 1.2rem; letter-spacing: -0.5px; }
-    .brand a { color: var(--text); text-decoration: none; }
+    .logo { font-weight: 800; letter-spacing: -1px; font-size: 1.1rem; text-transform: uppercase; }
+    .logo span { color: var(--accent); }
 
-    .nav-links { display: flex; gap: 8px; }
+    .nav-links { display: flex; gap: 24px; }
     .nav-links a {
-      color: var(--muted);
       text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      padding: 8px 16px;
-      border-radius: 8px;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
       transition: var(--transition);
     }
-    .nav-links a:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+    .nav-links a:hover { color: var(--accent); }
 
-    /* --- Hamburger Button --- */
-    .menu-toggle {
+    /* --- Mobile Toggle --- */
+    .menu-btn {
       display: none;
       background: none;
       border: none;
@@ -83,191 +79,265 @@
       padding: 10px;
       z-index: 1100;
     }
-    .hamburger {
+    .menu-btn span {
       display: block;
-      width: 24px;
+      width: 20px;
       height: 2px;
-      background: var(--text);
-      position: relative;
+      background: var(--text-main);
+      margin: 4px 0;
       transition: var(--transition);
     }
-    .hamburger::before, .hamburger::after {
-      content: '';
-      position: absolute;
-      width: 24px;
-      height: 2px;
-      background: var(--text);
-      left: 0;
-      transition: var(--transition);
-    }
-    .hamburger::before { top: -8px; }
-    .hamburger::after { bottom: -8px; }
 
-    /* Toggle State */
-    .menu-toggle.is-active .hamburger { background: transparent; }
-    .menu-toggle.is-active .hamburger::before { transform: rotate(45deg); top: 0; }
-    .menu-toggle.is-active .hamburger::after { transform: rotate(-45deg); bottom: 0; }
+    /* --- Hero Section --- */
+    .hero {
+      padding: 180px 0 100px;
+      border-bottom: 1px solid var(--panel-border);
+    }
+    .hero h1 {
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 20px;
+      letter-spacing: -2px;
+    }
+    .hero-meta {
+      display: flex;
+      gap: 20px;
+      color: var(--accent);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+    }
+
+    /* --- Grid System --- */
+    .section-padding { padding: 100px 0; border-bottom: 1px solid var(--panel-border); }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 30px; }
+    
+    .label {
+      grid-column: span 3;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: 2px;
+    }
+    .content { grid-column: span 9; }
+
+    /* --- Alias Cards --- */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .project-card {
+      background: var(--panel-bg);
+      border: 1px solid var(--panel-border);
+      padding: 30px;
+      border-radius: 4px;
+      transition: var(--transition);
+    }
+    .project-card:hover { border-color: var(--accent); transform: translateY(-5px); }
+    .project-card h3 { margin-bottom: 10px; font-size: 1.2rem; }
+    .project-card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px; }
+    .project-tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      padding: 4px 8px;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      border-radius: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    /* --- Bio Block --- */
+    .bio-text { font-size: 1.2rem; color: #ccc; line-height: 1.8; }
+    .bio-text strong { color: var(--text-main); }
+
+    /* --- Engineering/PlayLSD List --- */
+    .spec-list { list-style: none; }
+    .spec-item {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--panel-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .spec-item:last-child { border-bottom: none; }
+    .spec-title { font-weight: 700; font-size: 1rem; }
+    .spec-desc { color: var(--text-muted); font-size: 0.9rem; text-align: right; }
 
     /* --- Mobile Menu Overlay --- */
-    .mobile-nav {
+    .mobile-menu {
       position: fixed;
-      top: 0; right: -100%;
-      width: 100%; height: 100vh;
+      top: 0; left: 0; width: 100%; height: 100%;
       background: var(--bg);
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      gap: 24px;
-      transition: var(--transition);
-      z-index: 999;
-    }
-    .mobile-nav.is-open { right: 0; }
-    .mobile-nav a { font-size: 1.5rem; color: var(--text); text-decoration: none; font-weight: 700; }
-
-    /* --- Sections --- */
-    section { padding: 100px 0; border-bottom: 1px solid var(--border); }
-    .hero { padding: 160px 0 100px; text-align: center; border-bottom: 1px solid var(--border); }
-    
-    h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1; margin-bottom: 1rem; }
-    h2 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--text); }
-    .accent-text { color: var(--accent); }
-
-    /* --- Grid System --- */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 24px;
-    }
-    .col-12 { grid-column: span 12; }
-    .col-8 { grid-column: span 8; }
-    .col-6 { grid-column: span 6; }
-    .col-4 { grid-column: span 4; }
-
-    /* --- Card Styling --- */
-    .card {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 32px;
-      height: 100%;
-      transition: transform 0.3s ease, border-color 0.3s ease;
-    }
-    .card:hover { border-color: rgba(154, 230, 180, 0.3); }
-    .card h3 { margin-bottom: 12px; font-size: 1.25rem; }
-    .card p { color: var(--muted); font-size: 0.95rem; }
-
-    /* --- Artist Alias Cards --- */
-    .alias-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .alias-card {
-      background: linear-gradient(145deg, #161616, #0f0f0f);
-      padding: 24px;
-      border-radius: 16px;
-      border: 1px solid var(--border);
-    }
-
-    /* --- Utility --- */
-    .btn {
-      display: inline-flex;
       align-items: center;
-      padding: 12px 24px;
-      background: var(--text);
-      color: var(--bg);
-      border-radius: 12px;
-      font-weight: 700;
-      text-decoration: none;
+      gap: 30px;
+      opacity: 0;
+      visibility: hidden;
       transition: var(--transition);
+      z-index: 1050;
     }
-    .btn:hover { transform: translateY(-2px); opacity: 0.9; }
-    .btn.outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
-    
-    .embed-container {
-      position: relative;
-      width: 100%;
-      border-radius: 12px;
-      overflow: hidden;
-      background: #000;
-      margin-bottom: 16px;
-    }
-    .spotify-frame { height: 152px; width: 100%; border: none; }
-    .yt-frame { aspect-ratio: 16/9; width: 100%; border: none; }
+    .mobile-menu.active { opacity: 1; visibility: visible; }
+    .mobile-menu a { font-size: 1.5rem; font-weight: 800; text-decoration: none; color: var(--text-main); }
 
-    /* --- Responsive Fixes --- */
+    /* --- Footer --- */
+    footer { padding: 60px 0; color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* --- Media Queries --- */
     @media (max-width: 992px) {
-      .col-8, .col-4, .col-6 { grid-column: span 12; }
+      .label { grid-column: span 12; margin-bottom: -10px; }
+      .content { grid-column: span 12; }
       .nav-links { display: none; }
-      .menu-toggle { display: block; }
+      .menu-btn { display: block; }
     }
 
-    @media (max-width: 480px) {
-      section { padding: 60px 0; }
-      .card { padding: 20px; }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 3rem; }
+      .hero-meta { flex-direction: column; gap: 5px; }
+      .spec-item { flex-direction: column; align-items: flex-start; gap: 5px; }
+      .spec-desc { text-align: left; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="wrap nav-container">
-      <div class="brand"><a href="#top">KHALID BIN ALAM</a></div>
-      
-      <nav class="nav-links">
-        <a href="#bio">Bio</a>
-        <a href="#projects">Projects</a>
-        <a href="#releases">Releases</a>
-        <a href="#engineering">Engineering</a>
-        <a href="#contact">Contact</a>
+    <div class="container">
+      <nav>
+        <div class="logo">Khalid Bin Alam <span>(অপূর্ব)</span></div>
+        <div class="nav-links">
+          <a href="#about">Identity</a>
+          <a href="#projects">Projects</a>
+          <a href="#engineering">Technical</a>
+          <a href="#ecosystem">Ecosystem</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <button class="menu-btn" id="menuToggle" aria-label="Toggle Menu">
+          <span></span><span></span><span></span>
+        </button>
       </nav>
-
-      <button class="menu-toggle" id="menu-btn" aria-label="Toggle Menu">
-        <span class="hamburger"></span>
-      </button>
     </div>
   </header>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-nav" id="mobile-nav">
-    <a href="#bio">Bio</a>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">Identity</a>
     <a href="#projects">Projects</a>
-    <a href="#releases">Releases</a>
-    <a href="#engineering">Engineering</a>
+    <a href="#engineering">Technical</a>
+    <a href="#ecosystem">Ecosystem</a>
     <a href="#contact">Contact</a>
   </div>
 
   <main>
-    <section class="hero" id="top">
-      <div class="wrap">
-        <p class="accent-text" style="font-weight: 600; letter-spacing: 2px; margin-bottom: 10px;">PRODUCER • DJ • ENGINEER</p>
-        <h1>Electronic Sound <br/>Systems & Stories.</h1>
-        <p style="max-width: 600px; margin: 24px auto; color: var(--muted); font-size: 1.1rem;">
-          Independent music production from Bangladesh. Built for high-end sound systems and deep, long-form listening experiences.
-        </p>
-        <div style="display: flex; gap: 12px; justify-content: center; margin-top: 32px;">
-          <a href="#releases" class="btn">Listen Now</a>
-          <a href="#contact" class="btn outline">Bookings</a>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-meta">
+          <span>Producer</span>
+          <span>•</span>
+          <span>Audio Engineer</span>
+          <span>•</span>
+          <span>Curator</span>
+        </div>
+        <h1>Architecture in <br>Sound.</h1>
+      </div>
+    </section>
+
+    <!-- Identity Section -->
+    <section class="section-padding" id="about">
+      <div class="container">
+        <div class="grid">
+          <div class="label">Identity</div>
+          <div class="content">
+            <p class="bio-text">
+              Khalid Bin Alam is an independent electronic music producer and audio engineer based in Bangladesh. 
+              His career is built on <strong>long-term systems thinking</strong>—combining creative integrity with 
+              technical precision. He approaches music as architecture, prioritizing <strong>emotional space</strong> 
+              and longevity over disposable trends.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="bio">
-      <div class="wrap">
+    <!-- Projects Section -->
+    <section class="section-padding" id="projects">
+      <div class="container">
         <div class="grid">
-          <div class="col-8">
-            <h2>The Vision</h2>
-            <p style="font-size: 1.15rem; margin-bottom: 20px;">
-              Khalid Bin Alam treats electronic music as architecture. It’s not just about the beat; it’s about the emotional space the sound occupies. Working as a full-stack creator—from the first oscillator to the final master—Khalid ensures every frequency has a purpose.
-            </p>
-            <p style="color: var(--muted);">
-              Based in Bangladesh but connected globally, his work bridges underground club culture with cinematic sound design. Whether through the rave-heavy rhythms of <strong>Apurba</strong> or the ambient textures of <strong>Luminous Lullabies</strong>, the goal remains the same: honesty and sonic integrity.
-            </p>
+          <div class="label">Active Projects</div>
+          <div class="content">
+            <div class="project-grid">
+              <!-- Luminous Lullabies -->
+              <div class="project-card">
+                <span class="project-tag">Ambient</span>
+                <h3>Luminous Lullabies</h3>
+                <p>Cinematic, emotionally immersive soundscapes. Designed for deep listening, focus, and visual media.</p>
+              </div>
+              <!-- Zalvix -->
+              <div class="project-card">
+                <span class="project-tag">Melodic / Club</span>
+                <h3>Zalvix</h3>
+                <p>Club-facing identity. Structured melodic progression built for dancefloor systems and high-end DJ sets.</p>
+              </div>
+              <!-- Apurba -->
+              <div class="project-card">
+                <span class="project-tag">Underground</span>
+                <h3>Apurba (অপূর্ব)</h3>
+                <p>Conceptual and narrative-driven underground electronic. Rooted in regional identity and sonic experimentation.</p>
+              </div>
+            </div>
           </div>
-          <div class="col-4">
-            <div class="card">
-              <h3>Core Pillars</h3>
-              <ul style="list-style: none; color: var(--muted); display: grid; gap: 12px;">
-                <li><strong style="color: var(--accent);">01. Restraint</strong> — Clarity over clutter.</li>
-                <li><strong style="color: var(--accent);">02. Longevity</strong> — Built to last, not trend.</li>
-                <li><strong style="color: var(--accent);">03. System Integrity</strong> — Tested for big rooms.</li>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engineering Section -->
+    <section class="section-padding" id="engineering">
+      <div class="container">
+        <div class="grid">
+          <div class="label">Engineering Spec</div>
+          <div class="content">
+            <ul class="spec-list">
+              <li class="spec-item">
+                <span class="spec-title">System Translation</span>
+                <span class="spec-desc">Consistency across headphones, club PAs, and cinematic setups.</span>
+              </li>
+              <li class="spec-item">
+                <span class="spec-title">Dynamic Control</span>
+                <span class="spec-desc">High-impact clarity without the fatigue of over-compression.</span>
+              </li>
+              <li class="spec-item">
+                <span class="spec-title">Spatial Balance</span>
+                <span class="spec-desc">Precise width and depth tailored to sub-genre context.</span>
+              </li>
+              <li class="spec-item">
+                <span class="spec-title">Sound Design</span>
+                <span class="spec-desc">Custom synthesis and texture-driven arrangement.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ecosystem Section -->
+    <section class="section-padding" id="ecosystem">
+      <div class="container">
+        <div class="grid">
+          <div class="label">Ecosystem</div>
+          <div class="content">
+            <div class="project-card" style="background: var(--bg); border: 2px solid var(--accent);">
+              <h3 style="color: var(--accent);">PlayLSD — Founder</h3>
+              <p style="color: #fff; font-size: 1.1rem;">An independent curation and discovery platform focused on long-form electronic listening.</p>
+              <ul class="spec-list" style="margin-top: 20px;">
+                <li class="spec-item"><span>20+ Curated Global Playlists</span></li>
+                <li class="spec-item"><span>Early-stage Artist Exposure</span></li>
+                <li class="spec-item"><span>Algorithmic Discovery Logic Mastery</span></li>
               </ul>
             </div>
           </div>
@@ -275,140 +345,79 @@
       </div>
     </section>
 
-    <section id="projects">
-      <div class="wrap">
-        <h2 style="text-align: center; margin-bottom: 40px;">Creative Aliases</h2>
-        <div class="alias-grid">
-          <div class="alias-card">
-            <h3 class="accent-text">অপূর্ব (Apurba)</h3>
-            <p>Raw underground rave energy. Focused on rhythm, pressure, and late-night club functionality.</p>
-          </div>
-          <div class="alias-card">
-            <h3>Zalvix</h3>
-            <p>Melodic progression and forward-leaning grooves. Designed for festival stages and sunrise sets.</p>
-          </div>
-          <div class="alias-card">
-            <h3>Luminous Lullabies</h3>
-            <p>Atmospheric exploration. Deep textures and emotional soundscapes for headphone listening.</p>
-          </div>
-          <div class="alias-card">
-            <h3>Euphonic</h3>
-            <p>The research lab. Genre-agnostic experiments, sketches, and pure sonic curiosity.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="releases">
-      <div class="wrap">
-        <h2>Latest Releases</h2>
+    <!-- Contact Section -->
+    <section class="section-padding" id="contact">
+      <div class="container">
         <div class="grid">
-          <div class="col-6">
-            <div class="embed-container">
-              <iframe class="spotify-frame" src="https://open.spotify.com/embed/track/2NgY57feqYSDVqUQTbMZsR" allow="encrypted-media"></iframe>
+          <div class="label">Contact</div>
+          <div class="content">
+            <h2 style="margin-bottom: 20px;">For Bookings & Collaboration</h2>
+            <div class="nav-links" style="display: flex; flex-wrap: wrap; gap: 20px;">
+              <a href="https://linktr.ee/khalidbinalam" style="font-size: 1.2rem; color: var(--accent);">Professional Linktree</a>
+              <a href="https://linktr.ee/youmeiyou" style="font-size: 1.2rem; color: var(--accent);">Artist Discography</a>
             </div>
-          </div>
-          <div class="col-6">
-            <div class="embed-container">
-              <iframe class="spotify-frame" src="https://open.spotify.com/embed/album/6wNfZrP6Xgx19753ppoOy3" allow="encrypted-media"></iframe>
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="embed-container">
-              <iframe class="yt-frame" src="https://www.youtube.com/embed/om5QGreRaYg" title="YouTube video player" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="engineering" style="background: rgba(255,255,255,0.02);">
-      <div class="wrap">
-        <div class="grid">
-          <div class="col-12" style="text-align: center; margin-bottom: 40px;">
-            <h2>Audio Engineering</h2>
-            <p style="color: var(--muted);">Specialized in system translation and dynamic balance.</p>
-          </div>
-          <div class="col-4">
-            <div class="card">
-              <h3>Mixing</h3>
-              <p>Ensuring spatial depth and separation so every element breathes in the mix.</p>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="card">
-              <h3>Mastering</h3>
-              <p>Final polishing for club-ready loudness without sacrificing dynamic range.</p>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="card">
-              <h3>Curation</h3>
-              <p>Founder of PlayLSD, a platform for discovery and ecosystem health in electronic music.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="wrap">
-        <div class="card" style="text-align: center; max-width: 800px; margin: 0 auto;">
-          <h2>Get in Touch</h2>
-          <p style="margin-bottom: 30px;">For bookings, collaboration inquiries, or press kit requests.</p>
-          <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
-            <a href="https://linktr.ee/khalidbinalam" class="btn">Professional Linktree</a>
-            <a href="mailto:your-email@example.com" class="btn outline">Send Email</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer style="padding: 40px 0; border-top: 1px solid var(--border); text-align: center; font-size: 0.85rem; color: var(--muted);">
-    <div class="wrap">
-      <p>&copy; <span id="year"></span> Khalid Bin Alam. All rights reserved.</p>
+  <footer>
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+        <div>&copy; <span id="year"></span> Khalid Bin Alam • Dhaka / Global</div>
+        <div>Reference-Grade Profile • v1.0</div>
+      </div>
     </div>
   </footer>
 
   <script>
-    // --- Mobile Menu Logic ---
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileNav = document.getElementById('mobile-nav');
+    // Update Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile Menu Logic
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
     const body = document.body;
-    const navLinks = document.querySelectorAll('.mobile-nav a');
 
-    function toggleMenu() {
-      const isOpen = mobileNav.classList.toggle('is-open');
-      menuBtn.classList.toggle('is-active');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+      body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
       
-      // Prevent scrolling when menu is open
-      body.style.overflow = isOpen ? 'hidden' : 'auto';
-    }
+      // Animation for hamburger
+      const spans = menuToggle.querySelectorAll('span');
+      if(mobileMenu.classList.contains('active')) {
+        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'rotate(-45deg) translate(4px, -4px)';
+      } else {
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+      }
+    });
 
-    menuBtn.addEventListener('click', toggleMenu);
-
-    // Close menu when a link is clicked
-    navLinks.forEach(link => {
+    // Close menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        mobileNav.classList.remove('is-open');
-        menuBtn.classList.remove('is-active');
+        mobileMenu.classList.remove('active');
         body.style.overflow = 'auto';
+        const spans = menuToggle.querySelectorAll('span');
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
       });
     });
 
-    // --- Year Update ---
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // --- Header Scroll Effect ---
+    // Subtle Header Scroll Effect
     window.addEventListener('scroll', () => {
       const header = document.querySelector('header');
       if (window.scrollY > 50) {
-        header.style.background = 'rgba(11, 11, 11, 0.95)';
-        header.style.height = '60px';
+        header.style.padding = '5px 0';
+        header.style.backgroundColor = 'rgba(5, 5, 5, 0.95)';
       } else {
-        header.style.background = 'var(--glass)';
-        header.style.height = 'var(--header-h)';
+        header.style.padding = '0';
+        header.style.backgroundColor = 'rgba(5, 5, 5, 0.8)';
       }
     });
   </script>
