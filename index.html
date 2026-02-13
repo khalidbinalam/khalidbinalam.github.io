@@ -3,602 +3,665 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Khalid Bin Alam | Professional Profile & EPK</title>
-  <meta name="description" content="Official professional profile of Khalid Bin Alam (অপূর্ব). Electronic music producer, audio engineer, curator, and founder of PlayLSD." />
+  <title>Khalid Bin Alam | Electronic Artist, Engineer & Curator</title>
+  <meta name="description" content="Official profile of Khalid Bin Alam. Electronic producer, audio engineer, and founder of PlayLSD." />
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@200;400;600;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --bg: #050505;
-      --panel-bg: #0f0f0f;
-      --panel-border: rgba(255, 255, 255, 0.08);
+      --surface: #0a0a0a;
+      --surface-light: #121212;
+      --border: rgba(255, 255, 255, 0.08);
       --accent: #a7f3d0;
       --text-main: #ffffff;
       --text-muted: #a3a3a3;
-      --header-height: 70px;
-      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-
     body {
-      font-family: 'Inter', sans-serif;
       background-color: var(--bg);
       color: var(--text-main);
-      line-height: 1.6;
+      font-family: var(--font-body);
+      line-height: 1.7;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
+    body.nav-open { overflow: hidden; }
 
     .container { width: min(1200px, 92vw); margin: 0 auto; }
 
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: var(--header-height);
-      background: rgba(5, 5, 5, 0.85);
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
-      border-bottom: 1px solid var(--panel-border);
-      z-index: 1000;
-    }
-
+    /* --- NAVIGATION --- */
     nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 100%;
+      position: fixed;
+      top: 0; width: 100%; height: 80px;
+      background: rgba(5, 5, 5, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      display: flex; align-items: center;
     }
 
-    .logo { font-weight: 800; letter-spacing: -0.8px; font-size: 1.05rem; }
-    .logo span { color: var(--accent); }
+    /* Centered Header for PC */
+    .nav-inner { 
+      display: flex; 
+      justify-content: center; /* Centered for PC */
+      align-items: center; 
+      width: 100%;
+      position: relative;
+    }
 
-    .nav-links { display: flex; gap: 18px; }
-    .nav-links a {
-      text-decoration: none;
-      color: var(--text-muted);
-      font-size: 0.75rem;
-      font-weight: 600;
+    .logo { 
+      font-family: var(--font-display); 
+      font-weight: 700; 
+      font-size: 1.1rem; 
+      letter-spacing: -1px; 
       text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: var(--transition);
+      margin-right: 40px; /* Space between logo and links on PC */
+    }
+    .logo span { color: var(--accent); }
+    
+    .nav-links { display: flex; gap: 30px; align-items: center; }
+    .nav-links a {
+      text-decoration: none; color: var(--text-muted); font-size: 0.7rem;
+      text-transform: uppercase; letter-spacing: 2px; font-weight: 600; transition: var(--transition);
     }
     .nav-links a:hover { color: var(--accent); }
 
+    /* Hamburger Button (Mobile Only) */
     .menu-btn {
       display: none;
       background: none;
       border: none;
       cursor: pointer;
-      padding: 10px;
+      position: absolute;
+      right: 0;
       z-index: 1100;
+      padding: 10px;
     }
-    .menu-btn span {
-      display: block;
-      width: 20px;
+    .menu-btn .line {
+      width: 24px;
       height: 2px;
-      background: var(--text-main);
-      margin: 4px 0;
+      background-color: var(--text-main);
+      display: block;
+      margin: 5px 0;
       transition: var(--transition);
     }
 
-    .hero {
-      padding: 165px 0 90px;
-      border-bottom: 1px solid var(--panel-border);
-    }
-    .hero h1 {
-      font-size: clamp(2rem, 6.2vw, 4.8rem);
-      font-weight: 800;
-      line-height: 1.03;
-      margin: 16px 0 12px;
-      letter-spacing: -2px;
-    }
-    .hero p { color: var(--text-muted); max-width: 880px; }
+    /* --- HERO --- */
+    .hero { padding: 220px 0 100px; border-bottom: 1px solid var(--border); }
+    .hero-label { color: var(--accent); font-family: var(--font-display); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 5px; margin-bottom: 25px; display: block; }
+    .hero h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 8vw, 5.5rem); line-height: 0.9; font-weight: 700; letter-spacing: -4px; margin-bottom: 35px; }
+    .hero p { max-width: 850px; font-size: 1.25rem; color: var(--text-muted); font-weight: 200; }
 
-    .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 14px;
-      color: var(--accent);
-      font-weight: 600;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      letter-spacing: 1px;
-    }
+    /* --- CONTENT SECTIONS --- */
+    section { padding: 100px 0; border-bottom: 1px solid var(--border); }
+    .section-label { color: var(--accent); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 3px; font-weight: 800; display: block; margin-bottom: 15px; }
+    .section-title { font-family: var(--font-display); font-size: 2.8rem; line-height: 1.1; margin-bottom: 25px; font-weight: 700; }
+    
+    .grid-12 { display: grid; grid-template-columns: repeat(12, 1fr); gap: 30px; }
+    .col-4 { grid-column: span 4; }
+    .col-6 { grid-column: span 6; }
+    .col-8 { grid-column: span 8; }
 
-    .section-padding { padding: 85px 0; border-bottom: 1px solid var(--panel-border); }
-    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 28px; }
-
-    .label {
-      grid-column: span 3;
-      text-transform: uppercase;
-      font-size: 0.73rem;
-      font-weight: 800;
-      color: var(--accent);
-      letter-spacing: 2px;
-    }
-    .content { grid-column: span 9; }
-
-    .bio-text { font-size: 1.08rem; color: #d2d2d2; line-height: 1.8; }
-    .bio-text strong { color: var(--text-main); }
-
-    .info-list { margin-top: 20px; padding-left: 18px; color: #d0d0d0; }
-    .info-list li { margin-bottom: 8px; }
-
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-      margin-top: 25px;
-    }
-    .project-card {
-      background: var(--panel-bg);
-      border: 1px solid var(--panel-border);
-      padding: 26px;
-      border-radius: 6px;
+    /* --- CARDS --- */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 40px;
+      height: 100%;
       transition: var(--transition);
+      border-radius: 4px;
     }
-    .project-card:hover { border-color: var(--accent); transform: translateY(-3px); }
-    .project-card h3 { margin-bottom: 8px; font-size: 1.15rem; }
-    .project-card p { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 10px; }
-    .project-tag {
-      display: inline-block;
-      font-size: 0.63rem;
-      padding: 4px 8px;
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      border-radius: 2px;
-      text-transform: uppercase;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
+    .card:hover { border-color: var(--accent); transform: translateY(-8px); }
+    .card h3 { font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 15px; }
+    .card-meta { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); display: block; margin-bottom: 20px; font-weight: 800; }
+    
+    .panel { background: var(--surface-light); border: 1px solid var(--border); padding: 30px; border-radius: 4px; }
+    .info-list { list-style: none; margin-top: 15px; }
+    .info-list li { margin-bottom: 10px; color: var(--text-muted); font-size: 0.95rem; padding-left: 20px; position: relative; }
+    .info-list li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
 
-    .spec-list { list-style: none; }
+    /* --- ENGINEERING LIST --- */
     .spec-item {
-      padding: 18px 0;
-      border-bottom: 1px solid var(--panel-border);
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 14px;
+      display: flex; justify-content: space-between; padding: 25px 0; border-bottom: 1px dotted var(--border);
     }
-    .spec-item:last-child { border-bottom: none; }
-    .spec-title { font-weight: 700; font-size: 1rem; }
-    .spec-desc { color: var(--text-muted); font-size: 0.92rem; text-align: right; max-width: 65%; }
+    .spec-title { font-family: var(--font-display); font-weight: 700; }
+    .spec-desc { color: var(--text-muted); text-align: right; font-size: 0.9rem; max-width: 60%; }
 
-    .split-columns {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
-      margin-top: 18px;
+    /* --- ECOSYSTEM --- */
+    .ecosystem-box { background: var(--surface-light); padding: 80px; border: 1px solid var(--border); border-radius: 4px; }
+
+    /* --- LINKS HUB --- */
+    .hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 15px; }
+    .hub-btn {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 22px; border: 1px solid var(--border); font-size: 0.8rem;
+      text-transform: uppercase; font-family: var(--font-display); letter-spacing: 1px;
+      text-decoration: none; color: var(--text-main); transition: var(--transition);
     }
+    .hub-btn:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
 
-    .panel {
-      background: var(--panel-bg);
-      border: 1px solid var(--panel-border);
-      border-radius: 6px;
-      padding: 22px;
+    /* Hide Backlink Section */
+    .backlink-section { display: none !important; }
+
+    /* --- UTILITIES --- */
+    .btn {
+      display: inline-flex; align-items: center; padding: 15px 35px;
+      border: 1px solid var(--text-main); font-family: var(--font-display);
+      text-transform: uppercase; font-size: 0.75rem; letter-spacing: 2px;
+      text-decoration: none; color: var(--text-main); transition: var(--transition);
     }
+    .btn-accent { border-color: var(--accent); color: var(--accent); }
+    .btn-accent:hover { background: var(--accent); color: var(--bg); }
 
-    .mobile-menu {
-      position: fixed;
-      inset: 0;
-      background: var(--bg);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 24px;
-      opacity: 0;
-      visibility: hidden;
-      transition: var(--transition);
-      z-index: 1050;
+    
+
+    .btn-sm {
+      padding: 10px 18px;
+      font-size: 0.65rem;
+      letter-spacing: 1.6px;
     }
-    .mobile-menu.active { opacity: 1; visibility: visible; }
-    .mobile-menu a { font-size: 1.3rem; font-weight: 800; text-decoration: none; color: var(--text-main); }
-
-    footer {
-      padding: 48px 0;
+    .btn-ghost {
+      border-color: var(--border);
       color: var(--text-muted);
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
     }
-
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: transparent;
+    }
+    .card-links {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+/* --- MOBILE STYLES --- */
     @media (max-width: 1024px) {
-      .label { grid-column: span 12; margin-bottom: -8px; }
-      .content { grid-column: span 12; }
-      .nav-links { display: none; }
+      .nav-inner { justify-content: space-between; }
+      .logo { margin-right: 0; }
       .menu-btn { display: block; }
-      .spec-desc { max-width: 70%; }
-    }
+      
+      .nav-links {
+        position: fixed;
+        top: 0; right: -100%;
+        width: 100%; height: 100vh;
+        background: #000;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        gap: 40px;
+        z-index: 1050;
+      }
+      .nav-links.active { right: 0; }
+      .nav-links a { font-size: 1.2rem; }
 
-    @media (max-width: 650px) {
-      .hero-meta { flex-direction: column; gap: 2px; }
+      /* Cross Icon State */
+      .menu-btn.active .line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .menu-btn.active .line:nth-child(2) { opacity: 0; }
+      .menu-btn.active .line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+      .col-4, .col-6, .col-8 { grid-column: span 12; }
       .spec-item { flex-direction: column; }
-      .spec-desc { max-width: 100%; text-align: left; }
+      .spec-desc { text-align: left; max-width: 100%; margin-top: 5px; }
+      .ecosystem-box { padding: 40px; }
+      .hero { padding-top: 150px; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo">Khalid Bin Alam <span>(অপূর্ব)</span></div>
-        <div class="nav-links">
-          <a href="#identity">Identity</a>
-          <a href="#early-career">Early Career</a>
-          <a href="#philosophy">Philosophy</a>
-          <a href="#projects">Projects</a>
-          <a href="#engineering">Engineering</a>
-          <a href="#ecosystem">PlayLSD</a>
-          <a href="#future">Future</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <button class="menu-btn" id="menuToggle" aria-label="Toggle Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
-    </div>
-  </header>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#identity">Identity</a>
-    <a href="#early-career">Early Career</a>
-    <a href="#philosophy">Philosophy</a>
-    <a href="#projects">Projects</a>
-    <a href="#engineering">Engineering</a>
-    <a href="#ecosystem">PlayLSD</a>
-    <a href="#future">Future</a>
-    <a href="#contact">Contact</a>
-  </div>
+  <nav>
+    <div class="container nav-inner">
+      <div class="logo">Khalid Bin Alam <span>(অপূর্ব)</span></div>
+      
+      <button class="menu-btn" id="menuToggle" aria-label="Toggle Menu">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#about">Identity</a>
+        <a href="#aliases">Projects</a>
+        <a href="#engineering">Audio</a>
+        <a href="#playlsd">Curation</a>
+        <a href="#vision">Future</a>
+        <a href="#network">Links</a>
+      </div>
+    </div>
+  </nav>
 
   <main>
-    <section class="hero" id="identity">
+    <!-- HERO -->
+    <section class="hero">
       <div class="container">
-        <div class="hero-meta">
-          <span>Electronic Music Producer</span><span>•</span>
-          <span>Audio Engineer</span><span>•</span>
-          <span>Curator</span><span>•</span>
-          <span>Music Ecosystem Builder</span>
-        </div>
-        <h1>Khalid Bin Alam (অপূর্ব)</h1>
-        <p>Based in Bangladesh and working globally, Khalid is an independent electronic music producer and audio engineer whose work spans ambient, downtempo, experimental electronic, and club-oriented electronic music. Alongside his artistic output, he operates as a curator and ecosystem builder, actively contributing to music discovery, playlist culture, and independent artist infrastructure.</p>
-      </div>
-    </section>
+        <span class="hero-label">Producer • Engineer • Curator</span>
+        <h1>Designing Sound Through Systems & Soul.</h1>
+        <p>Independent electronic music professional focused on system translation, atmospheric depth, and infrastructure for the underground.</p>
+        <p style="margin-top: 18px; max-width: 900px; font-size: 1rem; color: var(--text-muted);">
+          I operate like a boutique studio + curator: building catalog-ready music, engineering clean masters, and creating discovery pipelines for independent artists through PlayLSD.
+          My artist name is <strong>অপূর্ব</strong>, with multiple projects separated by purpose and audience.
+        </p>
 
-    <section class="section-padding">
-      <div class="container">
-        <div class="grid">
-          <div class="label">Core Position</div>
-          <div class="content">
-            <p class="bio-text">His career is defined not by single releases, but by <strong>long-term systems thinking</strong> — combining creative integrity, technical precision, and music-industry strategy.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-padding" id="early-career">
-      <div class="container">
-        <div class="grid">
-          <div class="label">Past & Early Career Development</div>
-          <div class="content">
-            <p>Khalid’s early journey began through self-directed electronic music exploration, without institutional backing. Rather than chasing short-term visibility, his early focus was on technical discipline and sonic identity. This period established the foundation for later project separation and ecosystem development.</p>
-            <ul class="info-list">
-              <li>Learned music production independently</li>
-              <li>Studied sound design, synthesis, and arrangement</li>
-              <li>Developed mixing and mastering skills through practical release cycles</li>
-              <li>Built an understanding of digital music platforms and distribution mechanics</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-padding" id="philosophy">
-      <div class="container">
-        <div class="grid">
-          <div class="label">Artistic Philosophy</div>
-          <div class="content">
-            <p>Khalid approaches electronic music as architecture rather than entertainment. Core principles behind all projects, regardless of tempo or genre:</p>
-        </div>
-        <h1>Khalid Bin Alam (অপূর্ব)</h1>
-        <p>Based in Bangladesh and working globally, Khalid is an independent electronic music producer and audio engineer across ambient, downtempo, experimental electronic, and club-oriented electronic music. Alongside artistic output, he builds curation systems and independent artist infrastructure through long-term, strategy-led ecosystem work.</p>
-      </div>
-    </section>
-
-    <section class="section-padding">
-      <div class="container">
-        <div class="grid">
-          <div class="label">Core Position</div>
-          <div class="content">
-            <p class="bio-text">His career is defined not by single releases, but by <strong>long-term systems thinking</strong>—combining creative integrity, technical precision, and music-industry strategy. He approaches electronic music as architecture rather than entertainment.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-padding" id="early-career">
-      <div class="container">
-        <div class="grid">
-          <div class="label">Past & Early Career Development</div>
-          <div class="content">
-            <p>His early journey was self-directed, developed without institutional backing. This foundational period focused on technical discipline, sonic identity, and practical release cycles rather than short-term visibility.</p>
-            <ul class="info-list">
-              <li>Learned music production independently</li>
-              <li>Studied sound design, synthesis, and arrangement</li>
-              <li>Developed mixing and mastering skills through practical release cycles</li>
-              <li>Built working knowledge of digital platforms and distribution mechanics</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-padding" id="philosophy">
-      <div class="container">
-        <div class="grid">
-          <div class="label">Artistic Philosophy</div>
-          <div class="content">
-            <p>Core principles behind all projects, regardless of tempo or genre:</p>
-            <ul class="info-list">
-              <li>Sound must serve emotional space</li>
-              <li>Atmosphere is more important than density</li>
-              <li>Long-form listening outlasts trends</li>
-              <li>Sonic clarity reflects artistic honesty</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-padding" id="projects">
-      <div class="container">
-        <div class="grid">
-          <div class="label">Artist Projects</div>
-          <div class="content">
-            <div class="project-grid">
-              <article class="project-card">
-                <span class="project-tag">Ambient / Downtempo / Cinematic</span>
-                <h3>1) Luminous Lullabies</h3>
-                <p><strong>Role:</strong> Producer, Composer, Mixing & Mastering Engineer</p>
-                <p>Luminous Lullabies is Khalid’s ambient-focused project, built around calm, cinematic, and emotionally immersive soundscapes. The project is intentionally minimal, prioritizing spatial depth, subtle harmonic movement, and long-tail listening behavior.</p>
-                <ul class="info-list">
-                  <li>Deep listening environments</li>
-                  <li>Meditation, focus, late-night listening</li>
-                  <li>Visual media and cinematic contexts</li>
-                <p>A calm, cinematic, emotionally immersive ambient project that prioritizes spatial depth, subtle harmonic movement, and long-tail listening behavior.</p>
-                <ul class="info-list">
-                  <li>Built for deep listening, meditation, focus, and late-night contexts</li>
-                  <li>Suitable for visual media and cinematic environments</li>
-                  <li>Fully self-produced for consistent sonic identity and professional delivery</li>
-                  <li>Optimized for playlist discovery and sustainable catalog growth over viral metrics</li>
-                </ul>
-              </article>
-
-              <article class="project-card">
-                <span class="project-tag">Melodic Electronic / Progressive / Club-Oriented</span>
-                <h3>2) Zalvix</h3>
-                <p><strong>Role:</strong> Producer, DJ</p>
-                <p>Zalvix represents Khalid’s club-facing electronic identity. This project focuses on structured arrangements, melodic progression, and rhythm-forward production suitable for DJ sets and dancefloor environments.</p>
-                <ul class="info-list">
-                  <li>Club systems and festival environments</li>
-                  <li>DJ-driven listening culture</li>
-                  <li>Melodic energy with technical clarity</li>
-                  <li>Zalvix exists separately to avoid compromising the ambient direction of Luminous Lullabies</li>
-                <p>A club-facing identity focused on structured arrangements, melodic progression, and rhythm-forward production suited to DJ sets and dancefloor systems.</p>
-                <ul class="info-list">
-                  <li>Built for club systems and festival settings</li>
-                  <li>Aligned with DJ-driven listening culture</li>
-                  <li>Preserves the ambient direction of Luminous Lullabies through project separation</li>
-                </ul>
-              </article>
-
-              <article class="project-card">
-                <span class="project-tag">Experimental / Underground Electronic</span>
-                <h3>3) Apurba (অপূর্ব)</h3>
-                <p><strong>Role:</strong> Conceptual Artist</p>
-                <p>Apurba functions as Khalid’s cultural and conceptual identity, rooted in underground electronic ethos. This name represents experimentation, narrative-driven sound, and regional identity without genre restriction.</p>
-                <ul class="info-list">
-                  <li>Underground expression</li>
-                  <li>Cultural and emotional storytelling</li>
-                <p>A cultural and conceptual identity rooted in underground electronic ethos, emphasizing narrative sound design, experimentation, and regional identity without genre restriction.</p>
-                <ul class="info-list">
-                  <li>Underground expression and emotional storytelling</li>
-                  <li>Long-term conceptual development</li>
-                </ul>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-padding" id="engineering">
-      <div class="container">
-        <div class="grid">
-          <div class="label">Audio Engineering Practice</div>
-          <div class="content">
-            <p>Khalid operates as a mixing and mastering engineer, not as a service-first freelancer but as an extension of his artistic discipline.</p>
-            <ul class="spec-list">
-              <li class="spec-item"><span class="spec-title">Translation Across Systems</span><span class="spec-desc">Translation across listening systems.</span></li>
-              <li class="spec-item"><span class="spec-title">Dynamic Control</span><span class="spec-desc">Dynamic control without loudness fatigue.</span></li>
-              <li class="spec-item"><span class="spec-title">Spatial Balance</span><span class="spec-desc">Spatial balance with technical precision.</span></li>
-              <li class="spec-item"><span class="spec-title">Genre-Appropriate Mastering</span><span class="spec-desc">Mastering decisions aligned to genre and listening context.</span></li>
-            <p>Khalid works as a mixing and mastering engineer as an extension of artistic discipline, not as a service-first freelance model.</p>
-            <ul class="spec-list">
-              <li class="spec-item"><span class="spec-title">Translation Across Systems</span><span class="spec-desc">Reliable playback from headphones to club PA systems and varied consumer environments.</span></li>
-              <li class="spec-item"><span class="spec-title">Dynamic Control</span><span class="spec-desc">Impact and detail without loudness fatigue.</span></li>
-              <li class="spec-item"><span class="spec-title">Spatial Balance</span><span class="spec-desc">Intentional depth and stereo image management tailored to genre context.</span></li>
-              <li class="spec-item"><span class="spec-title">Genre-Appropriate Mastering</span><span class="spec-desc">Final masters optimized for purpose, platform behavior, and listening context.</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-padding" id="ecosystem">
-      <div class="container">
-        <div class="grid">
-          <div class="label">Industry & Ecosystem Work</div>
-          <div class="content">
+        <div class="grid-12" style="margin-top: 55px;">
+          <div class="col-4">
             <div class="panel">
-              <h3 style="color: var(--accent); margin-bottom: 8px;">Founder — PlayLSD</h3>
-              <p style="margin-bottom: 10px;">PlayLSD is an independent electronic music curation and discovery ecosystem founded and operated by Khalid.</p>
-              <p style="margin-bottom: 10px;">An independent electronic music curation and discovery ecosystem focused on taste, sustainability, and ecosystem health over transactional playlist placement.</p>
+              <span class="section-label" style="margin-bottom: 8px;">Focus</span>
               <ul class="info-list">
-                <li>20+ curated playlists across electronic subgenres</li>
-                <li>Artist discovery and early-stage exposure</li>
-                <li>Mood-based, quality-driven curation</li>
-                <li>Long-form listening focus</li>
+                <li>Ambient & cinematic soundscapes</li>
+                <li>Melodic club-ready electronic</li>
+                <li>Mix / master translation</li>
               </ul>
             </div>
-
-            <div class="split-columns">
-              <div class="panel">
-                <h3 style="margin-bottom: 8px;">Music Industry Knowledge Base</h3>
-                <ul class="info-list">
-                  <li>Playlist ecosystem mechanics</li>
-                  <li>Metadata and algorithmic discovery logic</li>
-                  <li>Release positioning and catalog strategy</li>
-                  <li>Artist branding separation and longevity</li>
-                  <li>Artist branding separation and longevity planning</li>
-                </ul>
-              </div>
-              <div class="panel">
-                <h3 style="margin-bottom: 8px;">Current Career Stage</h3>
-                <ul class="info-list">
-                  <li>A fully independent artist</li>
-                  <li>A catalog-focused producer</li>
-                  <li>A curator with platform-level understanding</li>
-                  <li>An ecosystem thinker rather than a single-release artist</li>
-                </ul>
-                <p style="margin-top: 12px;">His projects are positioned for long-term value, not short-term hype.</p>
-                  <li>Fully independent artist</li>
-                  <li>Catalog-focused producer</li>
-                  <li>Curator with platform-level understanding</li>
-                  <li>Ecosystem thinker rather than a single-release artist</li>
-                </ul>
-              </div>
+          </div>
+          <div class="col-4">
+            <div class="panel">
+              <span class="section-label" style="margin-bottom: 8px;">Workflow</span>
+              <ul class="info-list">
+                <li>Self-produced, mixed & mastered</li>
+                <li>Release strategy + metadata logic</li>
+                <li>Playlist & discovery infrastructure</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="panel">
+              <span class="section-label" style="margin-bottom: 8px;">Availability</span>
+              <ul class="info-list">
+                <li>Collabs & remixes</li>
+                <li>Mix / master projects</li>
+                <li>Curator partnerships</li>
+              </ul>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="section-padding" id="future">
-      <div class="container">
-        <div class="grid">
-          <div class="label">Future Goals & Direction</div>
-          <div class="content">
-            <div class="split-columns">
-              <div class="panel">
-                <h3 style="margin-bottom: 8px;">Creative Goals</h3>
-                <ul class="info-list">
-                  <li>Expand Luminous Lullabies into a deep ambient catalog</li>
-                  <li>Explore cinematic and sync-oriented compositions</li>
-                  <li>Develop experimental long-form works</li>
-                </ul>
-              </div>
-              <div class="panel">
-                <h3 style="margin-bottom: 8px;">Industry Goals</h3>
-                <ul class="info-list">
-                  <li>Evolve PlayLSD into a discovery and radio-style platform</li>
-                  <li>Build bridges between Bangladeshi artists and global ecosystems</li>
-                  <li>Contribute to sustainable electronic music infrastructure</li>
-                </ul>
-              </div>
-            </div>
-            <div class="panel" style="margin-top: 18px;">
-              <h3 style="margin-bottom: 8px;">Cultural Vision</h3>
-              <p>Khalid’s long-term vision is to help establish electronic music as a documented, respected, and sustainable art form within his region while remaining globally relevant.</p>
-            </div>
-            <div class="panel" style="margin-top: 18px; border-color: var(--accent);">
-              <h3 style="color: var(--accent); margin-bottom: 8px;">Summary Statement</h3>
-              <p>Khalid Bin Alam (অপূর্ব) is not defined by genre or trend. He is a multi-dimensional electronic music professional — combining production, engineering, curation, and ecosystem design. His work prioritizes depth, clarity, and longevity, positioning him as a serious collaborator, catalog artist, and future platform leader within the global electronic music landscape.</p>
-              <p>To help establish electronic music as a documented, respected, and sustainable art form within the region while staying globally relevant.</p>
-            </div>
-            <div class="panel" style="margin-top: 18px; border-color: var(--accent);">
-              <h3 style="color: var(--accent); margin-bottom: 8px;">Summary Statement</h3>
-              <p>Khalid Bin Alam (অপূর্ব) is a multi-dimensional electronic music professional combining production, engineering, curation, and ecosystem design. His work prioritizes depth, clarity, and longevity—positioning him as a serious collaborator, catalog artist, and future platform leader in the global electronic music landscape.</p>
-            </div>
+        <div style="margin-top: 40px; display: flex; gap: 20px; flex-wrap: wrap;">
+          <a href="#aliases" class="btn btn-accent">Explore Projects</a>
+          <a href="#network" class="btn">Link Hub</a>
+        </div>
+
+        <div class="grid-12" style="margin-top: 30px;">
+          <div class="col-4">
+            <article class="card">
+              <span class="card-meta">Next 6–12 months</span>
+              <h3>Catalog Expansion</h3>
+              <p>More consistent releases under Luminous Lullabies, plus selective Zalvix drops built for DJ support and playlist circulation.</p>
+            </article>
+          </div>
+          <div class="col-4">
+            <article class="card">
+              <span class="card-meta">12–24 months</span>
+              <h3>Collaboration & Sync</h3>
+              <p>Targeted collaborations and cinematic pieces suited for visual media, libraries, and ambient-focused editorial ecosystems.</p>
+            </article>
+          </div>
+          <div class="col-4">
+            <article class="card">
+              <span class="card-meta">Long-term</span>
+              <h3>Infrastructure</h3>
+              <p>Evolve PlayLSD into a full discovery layer: curated radio-style streams, community listening, and artist tooling.</p>
+            </article>
           </div>
         </div>
+
       </div>
     </section>
 
-    <section class="section-padding" id="contact">
-      <div class="container">
-        <div class="grid">
-          <div class="label">Contact</div>
-          <div class="content">
-            <h2 style="margin-bottom: 14px;">Bookings, collaboration, and professional inquiries</h2>
-            <div style="display: flex; flex-wrap: wrap; gap: 18px;">
-              <a href="https://linktr.ee/khalidbinalam" style="font-size: 1.05rem; color: var(--accent);">Professional Linktree</a>
-              <a href="https://linktr.ee/youmeiyou" style="font-size: 1.05rem; color: var(--accent);">Artist Discography</a>
-              <a href="https://www.linkedin.com/in/khalid-bin-alam/" style="font-size: 1.05rem; color: var(--accent);">LinkedIn</a>
-              <a href="https://www.facebook.com/zalv1x/" style="font-size: 1.05rem; color: var(--accent);">Facebook (Zalvix)</a>
-              <a href="https://www.facebook.com/iraveyou/" style="font-size: 1.05rem; color: var(--accent);">Facebook (iRaveYou)</a>
+    <!-- IDENTITY -->
+    <section id="about">
+      <div class="container grid-12">
+        <div class="col-8">
+          <span class="section-label">01 / Identity</span>
+          <h2 class="section-title">The Architectural Approach</h2>
+          <p style="font-size: 1.3rem; font-weight: 200; color: #ddd;">
+            "Music is not disposable content—it is a long-term cultural system." Khalid’s work bridges the gap between raw creative expression and the technical precision of audio engineering. 
+          </p>
+
+          <div style="margin-top: 30px;">
+            <div class="panel">
+              <h4 class="section-label">What I do</h4>
+              <ul class="info-list">
+                <li><strong>Production:</strong> concept → arrangement → sound design → final master, across ambient and electronic.</li>
+                <li><strong>Engineering:</strong> translation-focused mixing & mastering for streaming, clubs, and headphones.</li>
+                <li><strong>Curation:</strong> playlist ecosystems, taste-led programming, and discovery workflows via PlayLSD.</li>
+              </ul>
             </div>
-            <h3 style="margin: 20px 0 10px;">Backlinks</h3>
-            <ul class="info-list" style="margin-top: 0;">
-              <li><a href="https://linktr.ee/youmeiyou" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">https://linktr.ee/youmeiyou</a></li>
-              <li><a href="https://www.linkedin.com/in/khalid-bin-alam/" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">https://www.linkedin.com/in/khalid-bin-alam/</a></li>
-              <li><a href="https://www.facebook.com/zalv1x/" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">https://www.facebook.com/zalv1x/</a></li>
-              <li><a href="https://www.facebook.com/iraveyou/" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">https://www.facebook.com/iraveyou/</a></li>
-              <li><a href="https://linktr.ee/khalidbinalam" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">https://linktr.ee/khalidbinalam</a></li>
+          </div>
+
+          <div style="margin-top: 25px;">
+            <p style="color: var(--text-muted); max-width: 900px;">
+              My approach is deliberately long-term: building a coherent catalog, keeping identities separated by intent, and designing release pipelines that support consistent discovery.
+              I’m interested in collaborations where sound, brand, and distribution strategy are treated as one system—not separate tasks.
+            </p>
+          </div>
+
+        </div>
+        <div class="col-4">
+          <div class="panel">
+            <h4 class="section-label">Key Pillars</h4>
+            <ul class="info-list">
+              <li>Atmosphere > Density</li>
+              <li>Technical Honesty</li>
+              <li>Long-form Values</li>
             </ul>
           </div>
         </div>
+
+        <div class="grid-12" style="margin-top: 35px; grid-column: 1 / -1;">
+          <div class="col-6">
+            <div class="panel">
+              <h4 style="font-family: var(--font-display); margin-bottom: 10px;">Project Strategy</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem;">
+                Each alias exists for clarity: different emotional targets, different audiences, and different playlist ecosystems.
+                This avoids mixed signals, improves algorithmic placement, and keeps every release coherent.
+              </p>
+              <ul class="info-list">
+                <li><strong>Luminous Lullabies:</strong> ambient / cinematic / deep listening</li>
+                <li><strong>Zalvix:</strong> melodic electronic / club energy</li>
+                <li><strong>Apurba (অপূর্ব):</strong> underground, experimental identity</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="panel">
+              <h4 style="font-family: var(--font-display); margin-bottom: 10px;">Flagship: Luminous Lullabies</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem;">
+                Cinematic ambient designed for focus, meditation, late-night listening, and visual media. All releases are self-produced, mixed, and mastered.
+                <em>(Spotify data is the primary public metric used in this site.)</em>
+              </p>
+              <div style="margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="https://open.spotify.com/artist/2zKWBmG0FeVZ36llQlfjEA" class="btn btn-accent">Spotify Profile</a>
+                <a href="#network" class="btn">All Links</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
+
+    <!-- ALIASES -->
+    <section id="aliases">
+      <div class="container">
+        <span class="section-label">02 / Projects</span>
+        <h2 class="section-title">Trinity of Sound</h2>
+        <div class="grid-12">
+          <div class="col-4">
+            <article class="card">
+              <span class="card-meta">Apurba (অপূর্ব)</span>
+              <h3>The Underground</h3>
+              <p>Raw, narrative-driven sound design rooted in cultural storytelling.</p>
+            
+              <div class="card-links">
+                <a href="#network" class="btn btn-sm btn-ghost" data-linktype="streaming" data-project="Apurba (অপূর্ব)">Streaming site links</a>
+                <a href="#network" class="btn btn-sm btn-ghost" data-linktype="website" data-project="Apurba (অপূর্ব)">Website</a>
+                <a href="#network" class="btn btn-sm btn-ghost" data-linktype="releases" data-project="Apurba (অপূর্ব)">Releases</a>
+                <a href="#network" class="btn btn-sm btn-ghost" data-linktype="socials" data-project="Apurba (অপূর্ব)">Social links</a>
+              </div>
+
+            </article>
+          </div>
+          <div class="col-4">
+            <article class="card">
+              <span class="card-meta">Zalvix</span>
+              <h3>The Dancefloor</h3>
+              <p>Melodic Progressive House focus. Precision energy management for the club.</p>
+            
+              <div class="card-links">
+                <a href="#network" class="btn btn-sm btn-ghost" data-linktype="streaming" data-project="Zalvix">Streaming site links</a>
+                <a href="#network" class="btn btn-sm btn-ghost" data-linktype="website" data-project="Zalvix">Website</a>
+                <a href="#network" class="btn btn-sm btn-ghost" data-linktype="releases" data-project="Zalvix">Releases</a>
+                <a href="#network" class="btn btn-sm btn-ghost" data-linktype="socials" data-project="Zalvix">Social links</a>
+              </div>
+
+            </article>
+          </div>
+          <div class="col-4">
+            <article class="card">
+              <span class="card-meta">Luminous Lullabies</span>
+              <h3>The Atmosphere</h3>
+              <p>Cinematic ambient built for meditation, focus, and deep-listening.</p>
+            
+              <div class="card-links">
+                <a href="#network" class="btn btn-sm btn-ghost" data-linktype="streaming" data-project="Luminous Lullabies">Streaming site links</a>
+                <a href="#network" class="btn btn-sm btn-ghost" data-linktype="website" data-project="Luminous Lullabies">Website</a>
+                <a href="#network" class="btn btn-sm btn-ghost" data-linktype="releases" data-project="Luminous Lullabies">Releases</a>
+                <a href="#network" class="btn btn-sm btn-ghost" data-linktype="socials" data-project="Luminous Lullabies">Social links</a>
+              </div>
+
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENGINEERING -->
+    <section id="engineering">
+      <div class="container grid-12">
+        <div class="col-6">
+          <span class="section-label">03 / Engineering</span>
+          <h2 class="section-title">Audio Translation</h2>
+          <p>Strategic mixing and mastering to ensure sonic integrity from headphones to festival systems.</p>
+          <div style="margin-top: 30px;">
+            <a href="https://www.linkedin.com/in/khalid-bin-alam/" class="btn">View Portfolio</a>
+          </div>
+
+          <div style="margin-top: 28px;">
+            <div class="panel">
+              <h4 class="section-label">Deliverables</h4>
+              <ul class="info-list">
+                <li>Mixing (stereo + stems) with revision control</li>
+                <li>Mastering for streaming + club-ready loudness targets</li>
+                <li>Pre-release QC: headroom, clipping, mono compatibility</li>
+                <li>Metadata check: titles, ISRC/UPC readiness, credits</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-6">
+          <div class="spec-item"><span class="spec-title">Balanced Mixing</span><span class="spec-desc">Cross-platform playback optimization.</span></div>
+          <div class="spec-item"><span class="spec-title">Stem Mastering</span><span class="spec-desc">Dynamic control without loudness fatigue.</span></div>
+          <div class="spec-item"><span class="spec-title">Metadata Logic</span><span class="spec-desc">Algorithmic-friendly platform delivery.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLAYLSD -->
+    <section id="playlsd">
+      <div class="container">
+        <div class="ecosystem-box">
+          <span class="section-label">Discovery Ecosystem</span>
+          <h2 class="section-title" style="font-size: 3.5rem;">PlayLSD</h2>
+          <p style="max-width: 650px; margin-bottom: 30px; color: #aaa;">Independent curation engine focusing on taste and artist longevity over transactional placement.</p>
+          <a href="https://linktr.ee/khalidbinalam" class="btn btn-accent">Explore Ecosystem</a>
+
+          <div class="grid-12" style="margin-top: 35px; grid-column: 1 / -1;">
+            <div class="col-6">
+              <div class="panel">
+                <h4 style="font-family: var(--font-display); margin-bottom: 10px;">What PlayLSD Covers</h4>
+                <ul class="info-list">
+                  <li>Genre-spanning electronic programming (club + chill)</li>
+                  <li>Artist discovery workflows and submission funnels</li>
+                  <li>Playlist maintenance, sequencing, and listener retention</li>
+                  <li>Release support: positioning + metadata logic</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="panel">
+                <h4 style="font-family: var(--font-display); margin-bottom: 10px;">Why it Matters</h4>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">
+                  I treat curation as product design: consistent taste, clean structure, and sustainable growth loops.
+                  This perspective helps labels and collaborators because it reduces guesswork—music, packaging, and discovery are built together.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- VISION -->
+    <section id="vision">
+      <div class="container">
+        <span class="section-label">04 / Vision</span>
+        <h2 class="section-title">Sustainable Infrastructure</h2>
+        <div class="grid-12">
+          <div class="col-6">
+            <div class="panel">
+              <h4>Regional Goals</h4>
+              <p style="font-size: 0.9rem; color: #888;">To document and build a sustainable platform for Bangladeshi electronic music on the global stage.</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="panel">
+              <h4>Professional Direction</h4>
+              <p style="font-size: 0.9rem; color: #888;">Evolving beyond a producer to become a catalog-centric ecosystem leader.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NETWORK HUB -->
+    <section id="network">
+      <div class="container">
+        <span class="section-label">05 / Links</span>
+        <h2 class="section-title">Socials, Links & Demo Submission</h2>
+
+        <div class="grid-12" style="margin-top: 25px;">
+          <div class="col-6">
+            <div class="panel">
+              <h4 style="font-family: var(--font-display); margin-bottom: 10px;">Primary Socials</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 14px;">
+                Replace the placeholders below with your verified profiles (personal + projects).
+              </p>
+              <div class="hub-grid">
+                <a href="#" class="hub-btn" data-scope="primary" data-platform="instagram">Instagram <span>&rarr;</span></a>
+                <a href="#" class="hub-btn" data-scope="primary" data-platform="facebook">Facebook <span>&rarr;</span></a>
+                <a href="#" class="hub-btn" data-scope="primary" data-platform="youtube">YouTube <span>&rarr;</span></a>
+                <a href="#" class="hub-btn" data-scope="primary" data-platform="tiktok">TikTok <span>&rarr;</span></a>
+                <a href="#" class="hub-btn" data-scope="primary" data-platform="soundcloud">SoundCloud <span>&rarr;</span></a>
+                <a href="https://www.linkedin.com/in/khalid-bin-alam/" class="hub-btn" data-scope="primary" data-platform="linkedin">LinkedIn <span>&rarr;</span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="panel">
+              <h4 style="font-family: var(--font-display); margin-bottom: 10px;">Streaming Platforms</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 14px;">
+                Global artist pages + project-specific profiles.
+              </p>
+              <div class="hub-grid">
+                <a href="https://open.spotify.com/artist/2NgY57feqYSDVqUQTbMZsR" class="hub-btn" data-scope="streaming" data-platform="spotify">Spotify <span>&rarr;</span></a>
+                <a href="https://music.apple.com/us/artist/zalvix/1473215843" class="hub-btn" data-scope="streaming" data-platform="applemusic">Apple Music <span>&rarr;</span></a>
+                <a href="#" class="hub-btn" data-scope="streaming" data-platform="youtube_music">YouTube Music <span>&rarr;</span></a>
+                <a href="#" class="hub-btn" data-scope="streaming" data-platform="deezer">Deezer <span>&rarr;</span></a>
+                <a href="#" class="hub-btn" data-scope="streaming" data-platform="amazon_music">Amazon Music <span>&rarr;</span></a>
+                <a href="#" class="hub-btn" data-scope="streaming" data-platform="bandcamp">Bandcamp <span>&rarr;</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-12" style="margin-top: 25px;">
+          <div class="col-6">
+            <div class="panel">
+              <h4 style="font-family: var(--font-display); margin-bottom: 10px;">Project Link Packs</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 14px;">
+                One clean landing page per alias (smart links, EPK, press, releases).
+              </p>
+              <div class="hub-grid">
+                <a href="https://linktr.ee/youmeiyou" class="hub-btn" data-scope="packs" data-project="all">All Artist Links <span>&rarr;</span></a>
+                <a href="https://linktr.ee/khalidbinalam" class="hub-btn" data-scope="packs" data-project="playlsd">PlayLSD Ecosystem <span>&rarr;</span></a>
+                <a href="https://open.spotify.com/artist/2zKWBmG0FeVZ36llQlfjEA" class="hub-btn" data-scope="packs" data-project="luminous">Luminous Lullabies (Spotify) <span>&rarr;</span></a>
+                <a href="#" class="hub-btn" data-scope="packs" data-project="zalvix">Zalvix (Smart Link) <span>&rarr;</span></a>
+                <a href="#" class="hub-btn" data-scope="packs" data-project="apurba">Apurba (Smart Link) <span>&rarr;</span></a>
+                <a href="#" class="hub-btn" data-scope="packs" data-project="epk">Press Kit / EPK <span>&rarr;</span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="panel">
+              <h4 style="font-family: var(--font-display); margin-bottom: 10px;">Demo Submission</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 14px;">
+                Add one “official” demo/submission link (Google Form, Typeform, LabelRadar, Submithub, email, etc.).
+              </p>
+              <div style="display:flex; gap: 14px; flex-wrap: wrap; margin-bottom: 14px;">
+                <a href="#" class="btn btn-accent" data-scope="submission" data-type="demo">Submit a Demo</a>
+                <a href="#" class="btn" data-scope="submission" data-type="contact">Contact / Booking</a>
+              </div>
+
+              <div class="panel" style="padding: 22px; background: var(--surface);">
+                <span class="section-label" style="margin-bottom: 8px;">What you can submit</span>
+                <ul class="info-list">
+                  <li>Unreleased tracks (private links)</li>
+                  <li>Artist profile + socials</li>
+                  <li>Release date goals + label/playlist targets</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HIDDEN BACKLINKS SECTION -->
+    <div class="backlink-section">
+        <span>https://open.spotify.com/artist/2zKWBmG0FeVZ36llQlfjEA</span>
+        <span>https://linktr.ee/youmeiyou</span>
+        <span>https://www.linkedin.com/in/khalid-bin-alam/</span>
+        <span>https://www.facebook.com/zalv1x/</span>
+        <span>https://www.facebook.com/iraveyou/</span>
+        <span>https://linktr.ee/khalidbinalam</span>
+    </div>
   </main>
 
-  <footer>
-    <div class="container">
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
-        <div>&copy; <span id="year"></span> Khalid Bin Alam • Bangladesh / Global</div>
-        <div>Professional Profile • Structured Web Edition</div>
-      </div>
-    </div>
+  <footer style="padding: 60px 0; text-align: center; border-top: 1px solid var(--border);">
+    <p style="font-family: var(--font-display); font-weight: 700; letter-spacing: 2px;">KHALID BIN ALAM</p>
+    <p style="font-size: 0.65rem; color: #555; text-transform: uppercase; margin-top: 10px;">
+      &copy; <span id="year"></span> | Bangladesh — Global
+    </p>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    // SMOOTH MOBILE NAV TOGGLE
     const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
+    const navLinks = document.getElementById('navLinks');
     const body = document.body;
 
     menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('active');
-      body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
-
-      const spans = menuToggle.querySelectorAll('span');
-      if (mobileMenu.classList.contains('active')) {
-        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-        spans[1].style.opacity = '0';
-        spans[2].style.transform = 'rotate(-45deg) translate(4px, -4px)';
-      } else {
-        spans[0].style.transform = 'none';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'none';
-      }
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+      body.classList.toggle('nav-open');
     });
 
-    mobileMenu.querySelectorAll('a').forEach((link) => {
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-        body.style.overflow = 'auto';
-        const spans = menuToggle.querySelectorAll('span');
-        spans[0].style.transform = 'none';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'none';
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+        body.classList.remove('nav-open');
       });
     });
   </script>
