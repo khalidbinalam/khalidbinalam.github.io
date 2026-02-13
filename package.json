@@ -1,0 +1,23 @@
+{
+  "name": "khalid-bin-alam-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio website for Khalid Bin Alam - Electronic Artist, Engineer & Curator",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "portfolio",
+    "music",
+    "electronic",
+    "artist",
+    "engineer"
+  ],
+  "author": "Khalid Bin Alam",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
