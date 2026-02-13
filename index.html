@@ -3,275 +3,297 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Khalid Bin Alam | One‑Page EPK</title>
-  <meta name="description" content="Khalid Bin Alam is an independent electronic music artist, producer, DJ, audio engineer, curator, and ecosystem builder from Bangladesh. One‑page EPK with embeds and download." />
-  <meta property="og:title" content="Khalid Bin Alam | One‑Page EPK" />
-  <meta property="og:description" content="Independent electronic music artist (Apurba / Zalvix / Luminous Lullabies / Euphonic). Music, videos, mixes, press kit, and contact." />
-  <meta name="theme-color" content="#0b0b0b" />
-
+  <title>Khalid Bin Alam | EPK</title>
+  <meta name="description" content="Official EPK for Khalid Bin Alam - Electronic Music Artist, Producer, & Audio Engineer." />
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
   <style>
-    :root{--bg:#0b0b0b;--panel:#121212;--panel2:#0f0f0f;--text:#eaeaea;--muted:#bdbdbd;--soft:#8b8b8b;--accent:#9ae6b4;--accent2:#7dd3fc;--border:rgba(255,255,255,.08);--shadow:0 20px 60px rgba(0,0,0,.45);--w8:rgba(255,255,255,.08);--w4:rgba(255,255,255,.04);--w6:rgba(255,255,255,.06);--header-h:76px}
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:'Inter',sans-serif;background:radial-gradient(1200px 700px at 20% 10%,rgba(154,230,180,.08),transparent 60%),radial-gradient(900px 600px at 90% 20%,rgba(125,211,252,.06),transparent 55%),var(--bg);color:var(--text);line-height:1.7;letter-spacing:.1px}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{opacity:.9}
-    .wrap{width:min(1180px,90vw);margin:0 auto}
-    header{--header-height:var(--header-h);position:sticky;top:0;z-index:100;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(11,11,11,.82);border-bottom:1px solid var(--border)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:20px;min-height:52px;position:relative;z-index:102}
-    .brand{flex-shrink:0;font-weight:800;font-size:clamp(.95rem,1.8vw,1.05rem);letter-spacing:-.02em}
-    .brand a{color:var(--text);padding:6px 0;display:inline-block}
-    .navlinks{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.9rem;color:var(--muted)}
-    .navlinks a{color:var(--muted);padding:8px 12px;border-radius:10px;transition:background .15s ease,color .15s ease}
-    .navlinks a:hover{background:var(--w8);color:var(--text)}
-    .menu-toggle{display:none;flex-shrink:0;align-items:center;justify-content:center;width:44px;height:44px;min-width:44px;min-height:44px;padding:0;border:1px solid var(--border);border-radius:12px;background:var(--w4);color:var(--text);cursor:pointer;transition:background .15s ease;position:relative;z-index:103}
-    .menu-toggle:hover{background:var(--w8)}
-    .menu-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-    .menu-toggle .icon{display:flex;flex-direction:column;gap:5px;width:20px}
-    .menu-toggle .icon span{display:block;height:2px;background:currentColor;border-radius:1px;transition:transform .2s ease,opacity .2s ease}
-    .menu-toggle[aria-expanded="true"] .icon span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-    .menu-toggle[aria-expanded="true"] .icon span:nth-child(2){opacity:0}
-    .menu-toggle[aria-expanded="true"] .icon span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-    section{padding:72px 0;scroll-margin-top:var(--header-h)}
-    section:not(.hero):not(#bio):not(#contact){border-bottom:1px solid var(--border)}
-    h1,h2,h3{font-weight:800;letter-spacing:-.5px}
-    h1{font-size:clamp(2.2rem,4vw,3.4rem);line-height:1.1}
-    h2{font-size:clamp(1.5rem,2.2vw,2.2rem);margin-bottom:14px}
-    h3{font-size:1.1rem;margin-bottom:8px}
-    p{color:var(--muted);max-width:860px}
-    .hero{padding:100px 0 80px;border-bottom:1px solid var(--border);text-align:center}
-    .hero .wrap{max-width:640px}
-    .hero-name{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;letter-spacing:-.03em;line-height:1.1;color:var(--text);margin-bottom:8px}
-    .hero-name a{color:inherit}
-    .hero-role{font-size:1rem;color:var(--accent);font-weight:600;letter-spacing:.02em;margin-bottom:20px}
-    .hero-tagline{font-size:1.05rem;color:var(--muted);line-height:1.65;margin-bottom:32px}
-    .hero-social{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:28px}
-    .hero-social a{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:14px;border:1px solid var(--border);background:rgba(255,255,255,.05);color:var(--muted);transition:color .2s ease,background .2s ease,border-color .2s ease,transform .15s ease}
-    .hero-social a:hover{color:var(--text);background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.15);transform:translateY(-2px)}
-    .hero-social a svg{width:22px;height:22px}
-    .hero-cta{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
-    .tagline{margin-top:14px;font-size:1.06rem;color:var(--muted);max-width:880px}
-    .chips{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px}
-    .chip{padding:8px 12px;border:1px solid var(--border);background:var(--w4);border-radius:999px;font-size:.86rem;color:#d8d8d8}
-    .cta{margin-top:22px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid var(--border);background:var(--w6);color:var(--text);font-weight:600;font-size:.95rem;transition:transform .12s ease,background .12s ease}
-    .btn:hover{transform:translateY(-1px);background:var(--w8)}
-    .btn.primary{background:linear-gradient(135deg,rgba(154,230,180,.22),rgba(125,211,252,.14));border:1px solid rgba(154,230,180,.28)}
-    .note{margin-top:12px;font-size:.9rem;color:var(--soft)}
-    .panel{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.03));border:1px solid var(--border);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
-    .kv{display:grid;gap:10px}
-    .kv .row{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--w6)}
-    .kv .row:last-child{border-bottom:0}
-    .kv .k{color:var(--soft);font-size:.92rem}
-    .kv .v{color:#dedede;font-weight:600;font-size:.92rem;text-align:right}
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;align-items:stretch}
-    .col-3{grid-column:span 3}
-    .col-4{grid-column:span 4}
-    .col-6{grid-column:span 6}
-    .col-8{grid-column:span 8}
-    .col-12{grid-column:span 12}
-    .card{background:rgba(18,18,18,.82);border:1px solid var(--border);border-radius:16px;padding:22px;box-shadow:0 14px 40px rgba(0,0,0,.35)}
-    .muted{color:var(--muted)}
-    .section-head{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;margin-bottom:32px}
-    .section-head>div{width:100%}
-    .section-head h2{margin-bottom:0}
-    .section-head p{margin:0;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.65}
-    .section-head .cta{justify-content:center;margin-top:4px}
-    .section-head .cta.mt0{margin-top:0}
-    .card h3{color:var(--text);margin-bottom:10px;font-size:1.08rem}
-    .card p.small{line-height:1.65;margin-bottom:0}
-    #projects .card p{font-size:1rem;line-height:1.7;margin-bottom:0;color:var(--muted)}
-    .artist-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:8px}
-    .artist-card{aspect-ratio:1/1;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(165deg,rgba(18,18,18,.95),rgba(15,15,15,.9));border:1px solid var(--border);border-radius:20px;padding:clamp(20px,4vw,28px);box-shadow:0 14px 40px rgba(0,0,0,.35),0 0 0 1px rgba(255,255,255,.03) inset;transition:border-color .2s ease,box-shadow .2s ease}
-    .artist-card:hover{border-color:rgba(154,230,180,.2);box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.04) inset}
-    .artist-card h3{color:var(--text);font-size:clamp(1.05rem,1.5vw,1.2rem);margin-bottom:12px;line-height:1.25;letter-spacing:-.02em}
-    .artist-card p{font-size:clamp(.88rem,1.1vw,.95rem);line-height:1.65;color:var(--muted);margin:0;overflow-y:auto;-webkit-overflow-scrolling:touch}
-    @media(min-width:640px){.artist-cards{grid-template-columns:repeat(4,1fr);gap:24px}}
-    @media(max-width:480px){.artist-cards{grid-template-columns:1fr;gap:16px}.artist-card{aspect-ratio:1/1;min-height:200px}}
-    .streaming-links{gap:10px}
-    .card .list{margin-top:12px}
-    .card-grid{margin-top:16px}
-    .embed-gap{height:12px}
-    .card-gap{height:14px}
-    #bio{text-align:center}
-    #bio .wrap{max-width:720px}
-    .bio-block{max-width:680px;margin:16px auto 0}
-    .bio-block p{margin-bottom:1em;color:var(--muted);line-height:1.75}
-    .bio-block p:last-child{margin-bottom:0}
-    .bio-block h3{margin-top:1.75em;margin-bottom:.5em;color:var(--text);font-size:1.05rem}
-    .bio-block h3:first-of-type{margin-top:1.25em}
-    .embed{width:100%;border:0;border-radius:12px;overflow:hidden;background:#000}
-    .spotify{height:152px}
-    .spotify-tall{height:380px}
-    .embed.embed-sc{height:340px}
-    .yt{aspect-ratio:16/9}
-    .list{display:grid;gap:12px}
-    .item{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 16px;border:1px solid var(--w8);background:rgba(255,255,255,.03);border-radius:14px}
-    .item strong{font-size:.96rem}
-    .item span{color:var(--soft);font-size:.86rem}
-    .pill{font-size:.82rem;padding:7px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.1);background:var(--w4);color:#e8e8e8;white-space:nowrap}
-    footer{padding:40px 0 60px;border-top:1px solid var(--border);color:var(--soft);font-size:.9rem}
-    .small{font-size:.92rem}
-    .menu-overlay{display:none;position:fixed;inset:0;top:var(--header-height);z-index:101;background:rgba(11,11,11,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:24px;overflow-y:auto;overflow-x:hidden}
-    .menu-overlay.is-open{display:block}
-    .menu-overlay .navlinks{flex-direction:column;align-items:stretch;gap:4px}
-    .menu-overlay .navlinks a{padding:14px 16px;font-size:1rem;border-radius:12px}
-    @media(max-width:880px){.hero{padding:72px 0 56px}.hero-social a{width:44px;height:44px}.hero-social a svg{width:20px;height:20px}.col-3,.col-4,.col-6,.col-8{grid-column:span 12}.nav .navlinks{display:none}.menu-toggle{display:flex}}
-    @media(min-width:881px){.menu-overlay{display:none!important}}
-    html.menu-open{overflow:hidden}
-    html.menu-open body{overflow:hidden}
-    .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-    .footer-links{display:flex;gap:12px;flex-wrap:wrap}
-    .footer-dot{color:rgba(255,255,255,.18)}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.hero-social a{transition:none}.hero-social a:hover{transform:none}}
+    :root {
+      --bg: #0b0b0b;
+      --panel: #141414;
+      --text: #eeeeee;
+      --muted: #a0a0a0;
+      --accent: #9ae6b4; /* Emerald tint */
+      --accent2: #7dd3fc; /* Sky tint */
+      --border: rgba(255, 255, 255, 0.08);
+      --glass: rgba(18, 18, 18, 0.75);
+      --header-h: 70px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(154, 230, 180, 0.05) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(125, 211, 252, 0.05) 0px, transparent 50%);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .wrap { width: min(1200px, 90vw); margin: 0 auto; }
+
+    /* --- Navigation --- */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--header-h);
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+    }
+
+    .brand { font-weight: 800; font-size: 1.2rem; letter-spacing: -0.5px; }
+    .brand a { color: var(--text); text-decoration: none; }
+
+    .nav-links { display: flex; gap: 8px; }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: var(--transition);
+    }
+    .nav-links a:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+
+    /* --- Hamburger Button --- */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      z-index: 1100;
+    }
+    .hamburger {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      position: relative;
+      transition: var(--transition);
+    }
+    .hamburger::before, .hamburger::after {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      left: 0;
+      transition: var(--transition);
+    }
+    .hamburger::before { top: -8px; }
+    .hamburger::after { bottom: -8px; }
+
+    /* Toggle State */
+    .menu-toggle.is-active .hamburger { background: transparent; }
+    .menu-toggle.is-active .hamburger::before { transform: rotate(45deg); top: 0; }
+    .menu-toggle.is-active .hamburger::after { transform: rotate(-45deg); bottom: 0; }
+
+    /* --- Mobile Menu Overlay --- */
+    .mobile-nav {
+      position: fixed;
+      top: 0; right: -100%;
+      width: 100%; height: 100vh;
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      transition: var(--transition);
+      z-index: 999;
+    }
+    .mobile-nav.is-open { right: 0; }
+    .mobile-nav a { font-size: 1.5rem; color: var(--text); text-decoration: none; font-weight: 700; }
+
+    /* --- Sections --- */
+    section { padding: 100px 0; border-bottom: 1px solid var(--border); }
+    .hero { padding: 160px 0 100px; text-align: center; border-bottom: 1px solid var(--border); }
+    
+    h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1; margin-bottom: 1rem; }
+    h2 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--text); }
+    .accent-text { color: var(--accent); }
+
+    /* --- Grid System --- */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 24px;
+    }
+    .col-12 { grid-column: span 12; }
+    .col-8 { grid-column: span 8; }
+    .col-6 { grid-column: span 6; }
+    .col-4 { grid-column: span 4; }
+
+    /* --- Card Styling --- */
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+      height: 100%;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .card:hover { border-color: rgba(154, 230, 180, 0.3); }
+    .card h3 { margin-bottom: 12px; font-size: 1.25rem; }
+    .card p { color: var(--muted); font-size: 0.95rem; }
+
+    /* --- Artist Alias Cards --- */
+    .alias-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .alias-card {
+      background: linear-gradient(145deg, #161616, #0f0f0f);
+      padding: 24px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+    }
+
+    /* --- Utility --- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 24px;
+      background: var(--text);
+      color: var(--bg);
+      border-radius: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .btn:hover { transform: translateY(-2px); opacity: 0.9; }
+    .btn.outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
+    
+    .embed-container {
+      position: relative;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+      margin-bottom: 16px;
+    }
+    .spotify-frame { height: 152px; width: 100%; border: none; }
+    .yt-frame { aspect-ratio: 16/9; width: 100%; border: none; }
+
+    /* --- Responsive Fixes --- */
+    @media (max-width: 992px) {
+      .col-8, .col-4, .col-6 { grid-column: span 12; }
+      .nav-links { display: none; }
+      .menu-toggle { display: block; }
+    }
+
+    @media (max-width: 480px) {
+      section { padding: 60px 0; }
+      .card { padding: 20px; }
+    }
   </style>
 </head>
-
 <body>
+
   <header>
-    <div class="wrap">
-      <div class="nav">
-        <div class="brand">
-          <a href="#top">Khalid Bin Alam</a>
-        </div>
-        <nav class="navlinks" aria-label="Primary navigation">
-          <a href="#bio">Bio</a>
-          <a href="#projects">Projects</a>
-          <a href="#releases">Releases</a>
-          <a href="#videos">Remixes & Mixes</a>
-          <a href="#epk">EPK</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" id="menu-toggle-btn">
-          <span class="icon" aria-hidden="true">
-            <span></span><span></span><span></span>
-          </span>
-        </button>
-      </div>
-    </div>
-    <div class="menu-overlay" id="mobile-menu" aria-label="Mobile navigation" role="dialog" aria-modal="true" aria-hidden="true">
-      <nav class="navlinks">
+    <div class="wrap nav-container">
+      <div class="brand"><a href="#top">KHALID BIN ALAM</a></div>
+      
+      <nav class="nav-links">
         <a href="#bio">Bio</a>
         <a href="#projects">Projects</a>
         <a href="#releases">Releases</a>
-        <a href="#videos">Remixes & Mixes</a>
-        <a href="#epk">EPK</a>
+        <a href="#engineering">Engineering</a>
         <a href="#contact">Contact</a>
       </nav>
+
+      <button class="menu-toggle" id="menu-btn" aria-label="Toggle Menu">
+        <span class="hamburger"></span>
+      </button>
     </div>
   </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#bio">Bio</a>
+    <a href="#projects">Projects</a>
+    <a href="#releases">Releases</a>
+    <a href="#engineering">Engineering</a>
+    <a href="#contact">Contact</a>
+  </div>
 
   <main>
     <section class="hero" id="top">
       <div class="wrap">
-        <h1 class="hero-name"><a href="#top">Khalid Bin Alam</a></h1>
-        <p class="hero-role">Music Producer · DJ · Audio Engineer</p>
-        <p class="hero-tagline">Underground electronic music from Bangladesh. Production, DJ sets, and curation built for real dance floors and long‑form listening.</p>
-
-        <div class="hero-social" aria-label="Social and streaming links">
-          <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
-          </a>
-          <a href="https://soundcloud.com/youmeiyou" target="_blank" rel="noopener noreferrer" aria-label="SoundCloud">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c-.009-.054-.049-.1-.099-.1m-.899.898c-.06 0-.105.045-.112.102l-.167 1.257.167 1.203c.007.061.052.108.112.108.058 0 .104-.047.111-.108l.182-1.203-.182-1.257c-.007-.057-.053-.102-.111-.102m1.782-2.473c-.075 0-.136.06-.143.137l-.212 2.383.212 2.307c.007.077.068.138.143.138.074 0 .135-.061.142-.138l.235-2.307-.235-2.383c-.007-.077-.068-.137-.142-.137m.899-.449c-.068 0-.123.056-.13.124l-.199 1.772.199 1.648c.007.072.062.128.13.128.066 0 .121-.056.129-.128l.221-1.648-.221-1.772c-.008-.068-.063-.124-.129-.124m.898-.09c-.065 0-.119.053-.127.118l-.187 1.602.187 1.489c.008.069.062.124.127.124.064 0 .117-.055.125-.124l.208-1.489-.208-1.602c-.008-.065-.061-.118-.125-.118m14.246 1.439c-.646-.033-1.277.166-1.807.576-.021-.001-.042-.003-.063-.003-.622 0-1.189.36-1.452.921-.263-.552-.826-.918-1.415-.918-.033 0-.065.003-.097.006-.263-.552-.826-.918-1.415-.918-.622 0-1.152.378-1.381.91-.23-.532-.759-.91-1.381-.91-2.392 0-4.078 2.167-4.078 4.078 0 .061.006.121.013.181-.007-.001-.013-.003-.02-.003-.622 0-1.127.505-1.127 1.127v6.294c0 .622.505 1.127 1.127 1.127h12.539c2.783 0 5.039-2.256 5.039-5.039.001-2.589-1.957-4.717-4.453-5.004"/></svg>
-          </a>
-          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          </a>
-          <a href="https://linktr.ee/youmeiyou" target="_blank" rel="noopener noreferrer" aria-label="All links (Linktree)">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.953 15.066c-.08.163-.08.324-.08.486.08.162.08.324-.08.486l-.892 1.135c-.08.162-.244.324-.407.324H4.215c-.163 0-.244-.162-.244-.324v-6.756c0-.163.08-.324.244-.324h2.357c.163 0 .244.162.244.324v4.378l2.117-2.753c.163-.162.327-.162.49 0zm3.382-5.595c-.082 0-.163.08-.245.162l-3.502 4.378v-4.378c0-.163-.08-.324-.244-.324H5.352c-.163 0-.244.162-.244.324v6.756c0 .163.08.324.244.324h2.357c.163 0 .244-.162.244-.324v-1.459l.898-1.135 2.606 3.328c.08.162.244.324.407.324h2.604c.163 0 .327-.08.407-.244.08-.163.08-.405-.08-.567l-3.91-4.702 3.502-4.378c.163-.162.163-.405.08-.567-.08-.162-.244-.244-.407-.244h-2.604c-.163 0-.327.08-.407.162zM20.925 9.27h-2.357c-.163 0-.244.162-.244.324v1.946l-2.117-2.753c-.08-.162-.244-.162-.407 0-.08.162-.08.324-.08.486v6.756c0 .163.08.324.244.324h2.357c.163 0 .244-.162.244-.324v-4.378l2.117 2.753c.08.162.244.162.407 0 .08-.162.08-.324.08-.486V9.594c0-.162-.08-.324-.244-.324z"/></svg>
-          </a>
-        </div>
-
-        <div class="hero-cta">
-          <a class="btn primary" href="#releases">Listen</a>
-          <a class="btn" href="#contact">Bookings &amp; Press</a>
+        <p class="accent-text" style="font-weight: 600; letter-spacing: 2px; margin-bottom: 10px;">PRODUCER • DJ • ENGINEER</p>
+        <h1>Electronic Sound <br/>Systems & Stories.</h1>
+        <p style="max-width: 600px; margin: 24px auto; color: var(--muted); font-size: 1.1rem;">
+          Independent music production from Bangladesh. Built for high-end sound systems and deep, long-form listening experiences.
+        </p>
+        <div style="display: flex; gap: 12px; justify-content: center; margin-top: 32px;">
+          <a href="#releases" class="btn">Listen Now</a>
+          <a href="#contact" class="btn outline">Bookings</a>
         </div>
       </div>
     </section>
 
     <section id="bio">
       <div class="wrap">
-        <h2>About Khalid Bin Alam</h2>
-        <div class="bio-block">
-          <p class="bio-lead">Khalid Bin Alam is an independent electronic music artist, producer, DJ, audio engineer, curator, and ecosystem builder based in Bangladesh. He operates at the intersection of artistry, engineering, and infrastructure — treating electronic music as a long‑term cultural system built on integrity, clarity, and sustainability, not disposable content.</p>
-
-          <h3>Location & reach</h3>
-          <p>Based in Bangladesh while operating globally, Khalid’s work reflects regional identity without limiting international relevance or sonic vocabulary. His output is designed for clubs, festivals, long DJ sets, and deep listening worldwide.</p>
-
-          <h3>Projects & aliases</h3>
-          <p>He releases music under several aliases, each with a distinct function: <strong>অপূর্ব (Apurba)</strong> — raw, underground, rave‑oriented material focused on rhythm, pressure, and immersive club movement; <strong>Zalvix</strong> — melodic, forward‑leaning electronic music built for progression, groove, and extended DJ sets; <strong>Luminous Lullabies</strong> — atmospheric and emotional sound design exploring space, texture, and reflective listening; <strong>Euphonic</strong> — an open research space for genre‑agnostic experiments, sketches, and sonic studies. Multiple projects exist to protect creative clarity, not to fragment identity.</p>
-
-          <h3>Sound & approach</h3>
-          <p>His work sits at the intersection of underground club culture, melodic progression, and experimental sound design. The focus is depth, functionality, and musical honesty — not volume or trend‑chasing. Every track and set is produced, mixed, and tested with real systems and real rooms in mind; the goal is flow, tension, and emotional continuity. Music is built for real dance floors and long‑form listening, with system translation, DJ usability, and emotional continuity prioritized over algorithm‑driven formats. Set formats include DJ set, extended set, and collaborative sessions.</p>
-
-          <h3>Working solo & creative control</h3>
-          <p>Khalid works as a solo full‑stack creator: production → mix → master → release. Working independently allows full control over sound quality, delivery, communication, and creative direction. It keeps collaboration clear, timelines realistic, and the vision uncompromised.</p>
-
-          <h3>Identity & practice</h3>
-          <p>The career is shaped by systems thinking rather than isolated releases. Creative output, technical execution, and ecosystem awareness are developed together, allowing consistency across projects and platforms. Electronic music is approached as architecture rather than entertainment — built to shape emotional space, not to chase attention. Core values: emotional space (sound supports atmosphere and feeling); restraint (atmosphere over density, clarity over excess); longevity (long‑form listening outlasts trends); honesty (sonic clarity reflects artistic integrity).</p>
-
-          <h3>Audio engineering</h3>
-          <p>Engineering is treated as an extension of artistic responsibility, not a detached service. The practice emphasizes system translation (consistent results across headphones, clubs, and PA systems), dynamics (controlled energy without loudness fatigue), spatial balance (depth and separation tailored to genre context), and a longevity focus (engineering choices built for long‑term catalog value).</p>
-
-          <h3>Ecosystem & curation</h3>
-          <p>Beyond individual releases, Khalid actively builds and maintains infrastructure for discovery, curation, and sustainable artist growth. He is founder of <strong>PlayLSD</strong>, an independent electronic music curation ecosystem focused on long‑form listening, taste‑driven discovery, and early‑stage artist exposure — prioritizing ecosystem health over transactional promotion. He maintains an active understanding of playlist mechanics, metadata behavior, catalog positioning, and long‑term branding separation, enabling effective collaboration without external management layers.</p>
-
-          <h3>Collaboration</h3>
-          <p>Collaborators can expect clear communication, realistic timelines, shared creative intent, and respect for process; collaborations are approached as long‑term relationships, not one‑off transactions. Open to co‑production, remixing, and concept work with artists; DJs receive free downloads and DJ‑friendly material; promoters receive structured sets and dependable delivery.</p>
+        <div class="grid">
+          <div class="col-8">
+            <h2>The Vision</h2>
+            <p style="font-size: 1.15rem; margin-bottom: 20px;">
+              Khalid Bin Alam treats electronic music as architecture. It’s not just about the beat; it’s about the emotional space the sound occupies. Working as a full-stack creator—from the first oscillator to the final master—Khalid ensures every frequency has a purpose.
+            </p>
+            <p style="color: var(--muted);">
+              Based in Bangladesh but connected globally, his work bridges underground club culture with cinematic sound design. Whether through the rave-heavy rhythms of <strong>Apurba</strong> or the ambient textures of <strong>Luminous Lullabies</strong>, the goal remains the same: honesty and sonic integrity.
+            </p>
+          </div>
+          <div class="col-4">
+            <div class="card">
+              <h3>Core Pillars</h3>
+              <ul style="list-style: none; color: var(--muted); display: grid; gap: 12px;">
+                <li><strong style="color: var(--accent);">01. Restraint</strong> — Clarity over clutter.</li>
+                <li><strong style="color: var(--accent);">02. Longevity</strong> — Built to last, not trend.</li>
+                <li><strong style="color: var(--accent);">03. System Integrity</strong> — Tested for big rooms.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="projects">
       <div class="wrap">
-        <div class="section-head">
-          <div>
-            <h2>Projects & Aliases</h2>
-            <p>Multiple projects exist to protect creative clarity — not to fragment identity. Each alias serves a different musical and emotional function.</p>
+        <h2 style="text-align: center; margin-bottom: 40px;">Creative Aliases</h2>
+        <div class="alias-grid">
+          <div class="alias-card">
+            <h3 class="accent-text">অপূর্ব (Apurba)</h3>
+            <p>Raw underground rave energy. Focused on rhythm, pressure, and late-night club functionality.</p>
           </div>
-        </div>
-        <div class="artist-cards">
-          <div class="artist-card">
-            <h3>অপূর্ব (Apurba)</h3>
-            <p>Raw, underground, rave‑oriented material focused on rhythm, pressure, and immersive club movement. Built for real dance floors and long‑form listening with system translation and emotional continuity in mind.</p>
-          </div>
-          <div class="artist-card">
+          <div class="alias-card">
             <h3>Zalvix</h3>
-            <p>Melodic and forward‑leaning electronic music built for progression, groove, and extended DJ sets. Designed for clubs, festivals, and deep listening with clarity and flow at the core.</p>
+            <p>Melodic progression and forward-leaning grooves. Designed for festival stages and sunrise sets.</p>
           </div>
-          <div class="artist-card">
+          <div class="alias-card">
             <h3>Luminous Lullabies</h3>
-            <p>Atmospheric and emotional sound design exploring space, texture, and reflective listening. A place for ambient, emotional layers and long‑form sonic exploration.</p>
+            <p>Atmospheric exploration. Deep textures and emotional soundscapes for headphone listening.</p>
           </div>
-          <div class="artist-card">
+          <div class="alias-card">
             <h3>Euphonic</h3>
-            <p>An open research space for genre‑agnostic experiments, sketches, and sonic studies. No single style — pure exploration and creative freedom without commercial pressure.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="philosophy">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <h2>Artistic Philosophy</h2>
-            <p>Electronic music is approached as architecture rather than entertainment — built to shape emotional space, not to chase attention.</p>
-          </div>
-        </div>
-        <div class="grid">
-          <div class="card col-12">
-            <div class="list">
-              <div class="item"><div><strong>Emotional space</strong><br><span>sound exists to support atmosphere and feeling</span></div><div class="pill">intentional</div></div>
-              <div class="item"><div><strong>Restraint</strong><br><span>atmosphere over density, clarity over excess</span></div><div class="pill">disciplined</div></div>
-              <div class="item"><div><strong>Longevity</strong><br><span>long‑form listening outlasts trends</span></div><div class="pill">durable</div></div>
-              <div class="item"><div><strong>Honesty</strong><br><span>sonic clarity reflects artistic integrity</span></div><div class="pill">authentic</div></div>
-            </div>
+            <p>The research lab. Genre-agnostic experiments, sketches, and pure sonic curiosity.</p>
           </div>
         </div>
       </div>
@@ -279,179 +301,51 @@
 
     <section id="releases">
       <div class="wrap">
-        <div class="section-head">
-          <div>
-            <h2>Releases</h2>
-            <p>All embeds below are pulled from the official release links listed on the artist Linktree. (Spotify embeds work globally; if Spotify is blocked in a region, use the Linktree buttons.)</p>
-          </div>
-          <div class="cta mt0">
-            <a class="btn" href="https://open.spotify.com" target="_blank" rel="noopener">Spotify</a>
-            <a class="btn" href="https://music.apple.com" target="_blank" rel="noopener">Apple Music</a>
-            <a class="btn" href="https://soundcloud.com/youmeiyou" target="_blank" rel="noopener">SoundCloud</a>
-            <a class="btn" href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a>
-          </div>
-        </div>
-
+        <h2>Latest Releases</h2>
         <div class="grid">
-          <div class="card col-12">
-            <h3>Latest / Featured</h3>
-            <div class="grid card-grid">
-              <div class="col-6">
-                <iframe class="embed spotify" src="https://open.spotify.com/embed/track/2NgY57feqYSDVqUQTbMZsR" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="H4PPY"></iframe>
-              </div>
-              <div class="col-6">
-                <iframe class="embed spotify" src="https://open.spotify.com/embed/album/6wNfZrP6Xgx19753ppoOy3" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="London Love (Compilation)"></iframe>
-              </div>
+          <div class="col-6">
+            <div class="embed-container">
+              <iframe class="spotify-frame" src="https://open.spotify.com/embed/track/2NgY57feqYSDVqUQTbMZsR" allow="encrypted-media"></iframe>
             </div>
           </div>
-
-          <div class="card col-12">
-            <h3>Apurba Releases (2025)</h3>
-            <div class="grid card-grid">
-              <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/4OLEXwh1PwcMz3FgNjRZv7" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Trance by 3"></iframe></div>
-              <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/1nsJ7poGS2qorT2zkz9Vep" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Progress!ve"></iframe></div>
-              <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/79OCi8HEMhdD105OJ2LKYi" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="VOID"></iframe></div>
-              <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/1qDaML7JOjR84zWEuOHjDS" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Opening"></iframe></div>
-              <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/5sRq9z2kDTxlSKjOm5zNdE" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="PsyEcho"></iframe></div>
+          <div class="col-6">
+            <div class="embed-container">
+              <iframe class="spotify-frame" src="https://open.spotify.com/embed/album/6wNfZrP6Xgx19753ppoOy3" allow="encrypted-media"></iframe>
             </div>
           </div>
-
-          <div class="card col-12">
-            <h3>Other Aliases Releases</h3>
-            <div class="grid card-grid">
-              <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/0fsEdGyTJdT4vaZOxTXJZt" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="VIVID"></iframe></div>
-              <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/2xj37z12eieGVAECp3nzbi" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Flow"></iframe></div>
-              <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/3RWEah4dI7Y9CyiZwBhUz6" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Golden Hour"></iframe></div>
-              <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/3SlEIHHvEVLdiWuzQfEaNG" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Watching dreams together."></iframe></div>
-              <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/0J439mT1BYdUtLZPm6LeWp" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="August."></iframe></div>
-              <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/7j1NjjEqnduyCIynHCnadf" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Colors"></iframe></div>
-              <div class="col-6"><iframe class="embed spotify" src="https://open.spotify.com/embed/track/0CB22NoA65NnfSVilPosG4" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="2 Days"></iframe></div>
-              <div class="col-6">
-                <div class="item">
-                  <div>
-                    <strong>Wrong Turn (Fan Link)</strong><br />
-                    <span>Multi‑platform link (Apple Music / Amazon / Tidal)</span>
-                  </div>
-                  <a class="pill" href="https://push.fm/fl/WsGknoy1" target="_blank" rel="noopener">Open</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section id="videos">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <h2>Remixes & Live Mixes</h2>
-            <p>Selected remixes and mixes listed on the official Linktree. YouTube embeds below; SoundCloud mix included as a player.</p>
-          </div>
-        </div>
-
-        <div class="grid">
-          <div class="card col-8">
-            <h3>Remix</h3>
-            <iframe class="embed yt" src="https://www.youtube.com/embed/om5QGreRaYg" title="Nitol Paye Electric (Remix)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-            <div class="embed-gap"></div>
-            <iframe class="embed yt" src="https://www.youtube.com/embed/p_JortMUAI0" title="Hypnotic (Unofficial Remix)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-          </div>
-
-          <div class="card col-4">
-            <h3>SoundCloud Mix</h3>
-            <p class="small">Pre‑mixed set by Zalvix (Qbic Pulse). If your SoundCloud embed is blocked in some browsers, open it directly.</p>
-            <iframe class="embed embed-sc" scrolling="no" frameborder="no" allow="autoplay" loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/zalvix/a-demo-mixtape-by-zalvix-qbic-pulse/s-mia8I9hjiPT&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-          </div>
-
-          <div class="card col-12">
-            <h3>Live Mixes (YouTube)</h3>
-            <div class="grid card-grid">
-              <div class="col-6">
-                <iframe class="embed yt" src="https://www.youtube.com/embed/207WAnS77z0" title="Festival Vibe Melodic Bass House Mix | Mixtape01 by ZALVIX" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-              </div>
-              <div class="col-6">
-                <iframe class="embed yt" src="https://www.youtube.com/embed/PtE_IO8edj0" title="Emotional Deep House Mashup" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section id="engineering">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <h2>Audio Engineering Practice</h2>
-            <p>Engineering is treated as an extension of artistic responsibility, not a detached service.</p>
-          </div>
-        </div>
-        <div class="grid">
-          <div class="card col-12">
-            <div class="list">
-              <div class="item"><div><strong>System translation</strong><br><span>consistent results across headphones, clubs, and PA systems</span></div><div class="pill">reliable</div></div>
-              <div class="item"><div><strong>Dynamics</strong><br><span>controlled energy without loudness fatigue</span></div><div class="pill">balanced</div></div>
-              <div class="item"><div><strong>Spatial balance</strong><br><span>depth and separation tailored to genre context</span></div><div class="pill">precise</div></div>
-              <div class="item"><div><strong>Longevity focus</strong><br><span>engineering choices built for long‑term catalog value</span></div><div class="pill">sustainable</div></div>
+          <div class="col-12">
+            <div class="embed-container">
+              <iframe class="yt-frame" src="https://www.youtube.com/embed/om5QGreRaYg" title="YouTube video player" allowfullscreen></iframe>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="epk">
+    <section id="engineering" style="background: rgba(255,255,255,0.02);">
       <div class="wrap">
-        <div class="section-head">
-          <div>
-            <h2>EPK</h2>
-            <p>This page is designed for DJs, promoters, curators, and collaborators who need clarity quickly — what the sound is, how it works in real contexts, and how collaboration happens.</p>
-          </div>
-        </div>
-
         <div class="grid">
-          <div class="card col-6">
-            <h3>Sound & positioning</h3>
-            <p class="small">Underground electronic music informed by rave culture, melodic tension, and long‑form structure. Prioritizes system translation, DJ usability, and emotional continuity over algorithm‑driven formats.</p>
-            <div class="card-gap"></div>
-            <div class="list">
-              <div class="item"><div><strong>Designed for</strong><br><span>clubs, festivals, long DJ sets, deep listening</span></div><div class="pill">functional</div></div>
-              <div class="item"><div><strong>Set formats</strong><br><span>DJ set / extended set / collaborative sessions</span></div><div class="pill">flexible</div></div>
-              <div class="item"><div><strong>Workflow</strong><br><span>solo: production → mix → master → release</span></div><div class="pill">reliable</div></div>
+          <div class="col-12" style="text-align: center; margin-bottom: 40px;">
+            <h2>Audio Engineering</h2>
+            <p style="color: var(--muted);">Specialized in system translation and dynamic balance.</p>
+          </div>
+          <div class="col-4">
+            <div class="card">
+              <h3>Mixing</h3>
+              <p>Ensuring spatial depth and separation so every element breathes in the mix.</p>
             </div>
           </div>
-
-          <div class="card col-6">
-            <h3>What collaborators should expect</h3>
-            <p class="small">Clear communication, realistic timelines, shared creative intent, and respect for process. Collaborations are approached as long‑term relationships, not one‑off transactions.</p>
-            <div class="list">
-              <div class="item"><div><strong>Artists</strong><br><span>open to co‑production, remixing, and concept work</span></div><div class="pill">aligned</div></div>
-              <div class="item"><div><strong>DJs</strong><br><span>free downloads and DJ‑friendly material</span></div><div class="pill">usable</div></div>
-              <div class="item"><div><strong>Promoters</strong><br><span>structured sets, dependable delivery</span></div><div class="pill">professional</div></div>
+          <div class="col-4">
+            <div class="card">
+              <h3>Mastering</h3>
+              <p>Final polishing for club-ready loudness without sacrificing dynamic range.</p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="ecosystem">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <h2>Industry & Ecosystem Work</h2>
-            <p>Beyond individual releases, Khalid actively builds and maintains infrastructure for discovery, curation, and sustainable artist growth.</p>
-          </div>
-        </div>
-        <div class="grid">
-          <div class="card col-6">
-            <h3>PlayLSD — Founder</h3>
-            <p class="small">An independent electronic music curation ecosystem focused on long‑form listening, taste‑driven discovery, and early‑stage artist exposure. PlayLSD prioritizes ecosystem health over transactional promotion.</p>
-          </div>
-          <div class="card col-6">
-            <h3>Industry knowledge base</h3>
-            <p class="small">Active understanding of playlist mechanics, metadata behavior, catalog positioning, and long‑term branding separation — enabling effective collaboration without external management layers.</p>
+          <div class="col-4">
+            <div class="card">
+              <h3>Curation</h3>
+              <p>Founder of PlayLSD, a platform for discovery and ecosystem health in electronic music.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -459,87 +353,64 @@
 
     <section id="contact">
       <div class="wrap">
-        <div class="section-head">
-          <div>
-            <h2>Contact</h2>
-            <p>Bookings, collaborations, press, label/playlist outreach. Use the official contact routes below (keep everything centralized).</p>
-          </div>
-        </div>
-
-        <div class="grid">
-          <div class="card col-6">
-            <h3>Fastest</h3>
-            <p class="small">Use the Linktree contact routes and social links for the quickest response.</p>
-            <div class="cta">
-              <a class="btn primary" href="https://linktr.ee/khalidbinalam" target="_blank" rel="noopener">Open Professional Linktree</a>
-              <a class="btn" href="https://linktr.ee/youmeiyou" target="_blank" rel="noopener">Open Artist Linktree</a>
-            </div>
-          </div>
-
-          <div class="card col-6">
-            <h3>For promoters / press</h3>
-            <p class="small">If you’re booking a set, include date, city, venue/festival name, set length, and equipment details. If you’re press, include deadline and story angle.</p>
-            <div class="note">Tip: add a direct email address here when you want the site to capture bookings without sending people to Linktree.</div>
+        <div class="card" style="text-align: center; max-width: 800px; margin: 0 auto;">
+          <h2>Get in Touch</h2>
+          <p style="margin-bottom: 30px;">For bookings, collaboration inquiries, or press kit requests.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+            <a href="https://linktr.ee/khalidbinalam" class="btn">Professional Linktree</a>
+            <a href="mailto:your-email@example.com" class="btn outline">Send Email</a>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
-  <footer>
+  <footer style="padding: 40px 0; border-top: 1px solid var(--border); text-align: center; font-size: 0.85rem; color: var(--muted);">
     <div class="wrap">
-      <div class="footer-inner">
-        <div>© <span id="y"></span> Khalid Bin Alam — Independent Electronic Music</div>
-        <div class="footer-links">
-          <a href="#top">Back to top</a>
-          <span class="footer-dot">•</span>
-          <a href="https://linktr.ee/youmeiyou" target="_blank" rel="noopener">Music Links</a>
-          <span class="footer-dot">•</span>
-          <a href="https://linktr.ee/khalidbinalam" target="_blank" rel="noopener">Professional</a>
-        </div>
-      </div>
+      <p>&copy; <span id="year"></span> Khalid Bin Alam. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
-    (function(){
-      var y=document.getElementById('y');
-      if(y)y.textContent=new Date().getFullYear();
-    })();
-    (function(){
-      var b=document.getElementById('menu-toggle-btn');
-      var m=document.getElementById('mobile-menu');
-      if(!b||!m)return;
-      function openMenu(){
-        b.setAttribute('aria-expanded','true');
-        b.setAttribute('aria-label','Close menu');
-        m.classList.add('is-open');
-        m.setAttribute('aria-hidden','false');
-        document.documentElement.classList.add('menu-open');
+    // --- Mobile Menu Logic ---
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    const body = document.body;
+    const navLinks = document.querySelectorAll('.mobile-nav a');
+
+    function toggleMenu() {
+      const isOpen = mobileNav.classList.toggle('is-open');
+      menuBtn.classList.toggle('is-active');
+      
+      // Prevent scrolling when menu is open
+      body.style.overflow = isOpen ? 'hidden' : 'auto';
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+
+    // Close menu when a link is clicked
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('is-open');
+        menuBtn.classList.remove('is-active');
+        body.style.overflow = 'auto';
+      });
+    });
+
+    // --- Year Update ---
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // --- Header Scroll Effect ---
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.style.background = 'rgba(11, 11, 11, 0.95)';
+        header.style.height = '60px';
+      } else {
+        header.style.background = 'var(--glass)';
+        header.style.height = 'var(--header-h)';
       }
-      function closeMenu(){
-        b.setAttribute('aria-expanded','false');
-        b.setAttribute('aria-label','Open menu');
-        m.classList.remove('is-open');
-        m.setAttribute('aria-hidden','true');
-        document.documentElement.classList.remove('menu-open');
-      }
-      b.addEventListener('click',function(e){
-        e.preventDefault();
-        e.stopPropagation();
-        if(m.classList.contains('is-open'))closeMenu();else openMenu();
-      });
-      m.querySelectorAll('a').forEach(function(link){
-        link.addEventListener('click',closeMenu);
-      });
-      document.addEventListener('keydown',function(e){
-        if(e.key==='Escape'&&m.classList.contains('is-open'))closeMenu();
-      });
-      m.addEventListener('click',function(e){
-        if(e.target===m)closeMenu();
-      });
-    })();
+    });
   </script>
 </body>
 </html>
