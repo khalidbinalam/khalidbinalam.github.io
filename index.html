@@ -4,7 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Khalid Bin Alam | Electronic Artist, Engineer & Curator</title>
-  <meta name="description" content="Official profile of Khalid Bin Alam. Electronic producer, audio engineer, and founder of PlayLSD." />
+  <meta name="description" content="Khalid Bin Alam - Independent electronic music producer, audio engineer, and PlayLSD curator. Ambient, experimental, and club electronic music. Artist known as Apurba (অপূর্ব), Zalvix, Luminous Lullabies." />
+  <meta name="keywords" content="electronic music producer, ambient music, downtempo, experimental electronic, audio engineer, mixing mastering, music curator, PlayLSD, Apurba, Zalvix, Luminous Lullabies, Bengali artist" />
+  <meta name="author" content="Khalid Bin Alam" />
+  <meta property="og:title" content="Khalid Bin Alam - Producer, Engineer & Curator" />
+  <meta property="og:description" content="Independent electronic music professional. Ambient, experimental, club-ready tracks. Mixing/mastering services. PlayLSD curation platform." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -187,6 +193,41 @@
       gap: 12px;
       flex-wrap: wrap;
     }
+
+    /* --- VIBE TAGS --- */
+    .vibe-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px; }
+    .vibe-tag {
+      display: inline-flex; align-items: center;
+      padding: 8px 14px; background: var(--surface-light);
+      border: 1px solid var(--border); border-radius: 20px;
+      font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px;
+      color: var(--accent); font-weight: 600;
+    }
+
+    /* --- HERO LINKS SECTION --- */
+    .hero-links-section {
+      margin-top: 60px; padding-top: 50px;
+      border-top: 1px solid var(--border);
+    }
+    .hero-links-section h3 {
+      font-family: var(--font-display); font-size: 1.2rem;
+      text-transform: uppercase; letter-spacing: 3px;
+      margin-bottom: 30px; color: var(--text-muted);
+    }
+    .link-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; }
+    .link-column h4 {
+      font-family: var(--font-display); font-size: 0.95rem;
+      text-transform: uppercase; letter-spacing: 2px;
+      margin-bottom: 15px; color: var(--accent);
+    }
+    .link-column a {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 0; border-bottom: 1px solid var(--border);
+      text-decoration: none; color: var(--text-main);
+      transition: var(--transition);
+    }
+    .link-column a:hover { color: var(--accent); padding-right: 10px; }
+
 /* --- MOBILE STYLES --- */
     @media (max-width: 1024px) {
       .nav-inner { justify-content: space-between; }
@@ -245,76 +286,100 @@
   </nav>
 
   <main>
-    <!-- HERO -->
+    <!-- HERO / EPK -->
     <section class="hero">
       <div class="container">
         <span class="hero-label">Producer • Engineer • Curator</span>
         <h1>Designing Sound Through Systems & Soul.</h1>
-        <p>Independent electronic music professional focused on system translation, atmospheric depth, and infrastructure for the underground.</p>
-        <p style="margin-top: 18px; max-width: 900px; font-size: 1rem; color: var(--text-muted);">
-          I operate like a boutique studio + curator: building catalog-ready music, engineering clean masters, and creating discovery pipelines for independent artists through PlayLSD.
-          My artist name is <strong>অপূর্ব</strong>, with multiple projects separated by purpose and audience.
+
+        <div style="margin-top: 25px;">
+          <div class="vibe-tags">
+            <span class="vibe-tag">Ambient</span>
+            <span class="vibe-tag">Experimental</span>
+            <span class="vibe-tag">Downtempo</span>
+            <span class="vibe-tag">House</span>
+            <span class="vibe-tag">Cinematic</span>
+            <span class="vibe-tag">Club</span>
+          </div>
+        </div>
+
+        <p style="margin-top: 35px; max-width: 900px; font-size: 1.25rem; color: var(--text-muted); font-weight: 200;">
+          Independent electronic music professional focused on system translation, atmospheric depth, and infrastructure for the underground.
         </p>
 
+        <p style="margin-top: 18px; max-width: 900px; font-size: 1rem; color: var(--text-muted);">
+          I operate as a boutique production + curation studio: building catalog-ready music across multiple artist identities, engineering translation-focused masters, and creating discovery infrastructure for independent artists through PlayLSD. My primary artist name is <strong>অপূর্ব (Apurba)</strong>, with additional projects (Zalvix, Luminous Lullabies) separated by purpose, emotional intent, and target audience.
+        </p>
+
+        <!-- CORE OFFERINGS -->
         <div class="grid-12" style="margin-top: 55px;">
           <div class="col-4">
             <div class="panel">
-              <span class="section-label" style="margin-bottom: 8px;">Focus</span>
+              <span class="section-label" style="margin-bottom: 8px;">Production</span>
               <ul class="info-list">
                 <li>Ambient & cinematic soundscapes</li>
-                <li>Melodic club-ready electronic</li>
-                <li>Mix / master translation</li>
+                <li>Experimental electronic design</li>
+                <li>Melodic club-ready tracks</li>
               </ul>
             </div>
           </div>
           <div class="col-4">
             <div class="panel">
-              <span class="section-label" style="margin-bottom: 8px;">Workflow</span>
+              <span class="section-label" style="margin-bottom: 8px;">Engineering</span>
               <ul class="info-list">
-                <li>Self-produced, mixed & mastered</li>
-                <li>Release strategy + metadata logic</li>
-                <li>Playlist & discovery infrastructure</li>
+                <li>Mixing & mastering (streaming/club)</li>
+                <li>Translation across playback systems</li>
+                <li>Metadata & release strategy</li>
               </ul>
             </div>
           </div>
           <div class="col-4">
             <div class="panel">
-              <span class="section-label" style="margin-bottom: 8px;">Availability</span>
+              <span class="section-label" style="margin-bottom: 8px;">Curation</span>
               <ul class="info-list">
-                <li>Collabs & remixes</li>
-                <li>Mix / master projects</li>
-                <li>Curator partnerships</li>
+                <li>PlayLSD playlist programming</li>
+                <li>Artist discovery & A&R</li>
+                <li>Label infrastructure & vision</li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div style="margin-top: 40px; display: flex; gap: 20px; flex-wrap: wrap;">
-          <a href="#aliases" class="btn btn-accent">Explore Projects</a>
-          <a href="#network" class="btn">Link Hub</a>
-        </div>
+        <!-- HERO LINKS SECTION -->
+        <div class="hero-links-section">
+          <h3>Quick Access</h3>
+          <div class="link-columns">
+            <!-- Artist Links -->
+            <div class="link-column">
+              <h4>Artist Profiles</h4>
+              <a href="https://linktr.ee/youmeiyou">Apurba (অপূর্ব) <span>&rarr;</span></a>
+              <a href="https://www.facebook.com/zalv1x/">Zalvix <span>&rarr;</span></a>
+              <a href="https://open.spotify.com/artist/2zKWBmG0FeVZ36llQlfjEA">Luminous Lullabies <span>&rarr;</span></a>
+            </div>
 
-        <div class="grid-12" style="margin-top: 30px;">
-          <div class="col-4">
-            <article class="card">
-              <span class="card-meta">Next 6–12 months</span>
-              <h3>Catalog Expansion</h3>
-              <p>More consistent releases under Luminous Lullabies, plus selective Zalvix drops built for DJ support and playlist circulation.</p>
-            </article>
-          </div>
-          <div class="col-4">
-            <article class="card">
-              <span class="card-meta">12–24 months</span>
-              <h3>Collaboration & Sync</h3>
-              <p>Targeted collaborations and cinematic pieces suited for visual media, libraries, and ambient-focused editorial ecosystems.</p>
-            </article>
-          </div>
-          <div class="col-4">
-            <article class="card">
-              <span class="card-meta">Long-term</span>
-              <h3>Infrastructure</h3>
-              <p>Evolve PlayLSD into a full discovery layer: curated radio-style streams, community listening, and artist tooling.</p>
-            </article>
+            <!-- Streaming Platforms -->
+            <div class="link-column">
+              <h4>Stream Now</h4>
+              <a href="https://open.spotify.com/artist/2NgY57feqYSDVqUQTbMZsR">Spotify <span>&rarr;</span></a>
+              <a href="https://music.apple.com/us/artist/zalvix/1473215843">Apple Music <span>&rarr;</span></a>
+              <a href="#">YouTube Music <span>&rarr;</span></a>
+            </div>
+
+            <!-- Services & Projects -->
+            <div class="link-column">
+              <h4>Services & Ecosystem</h4>
+              <a href="https://linktr.ee/khalidbinalam">PlayLSD Curation <span>&rarr;</span></a>
+              <a href="https://www.linkedin.com/in/khalid-bin-alam/">Audio Engineering <span>&rarr;</span></a>
+              <a href="#network">All Platforms <span>&rarr;</span></a>
+            </div>
+
+            <!-- Professional -->
+            <div class="link-column">
+              <h4>Professional</h4>
+              <a href="https://www.linkedin.com/in/khalid-bin-alam/">LinkedIn Portfolio <span>&rarr;</span></a>
+              <a href="mailto:hello@khalidbinalam.com">Contact / Collabs <span>&rarr;</span></a>
+              <a href="#network">Press Kit <span>&rarr;</span></a>
+            </div>
           </div>
         </div>
 
@@ -399,65 +464,69 @@
       </div>
     </section>
 
-    <!-- PROJECTS & ECOSYSTEM CARDS -->
+    <!-- ARTIST IDENTITIES -->
     <section id="aliases">
       <div class="container">
-        <span class="section-label">02 / Projects & Ecosystem</span>
-        <h2 class="section-title">Artist Identities & Curation</h2>
+        <span class="section-label">01 / Artist Projects</span>
+        <h2 class="section-title">The Trinity: Separated by Intent & Audience</h2>
 
-        <!-- Artist Alias Cards -->
-        <div class="grid-12" style="margin-bottom: 50px;">
+        <div class="grid-12" style="margin-bottom: 40px;">
           <div class="col-4">
             <article class="card">
-              <span class="card-meta">Apurba (অপূর্ব)</span>
-              <h3>The Underground</h3>
-              <p>Raw, narrative-driven sound design rooted in cultural storytelling.</p>
-              <div style="margin-top: 20px;">
-                <a href="https://linktr.ee/youmeiyou" class="btn btn-accent btn-sm">Explore Links</a>
+              <span class="card-meta">Primary Identity</span>
+              <h3>অপূর্ব (Apurba)</h3>
+              <p>Underground experimental electronic. Raw, narrative-driven sound design rooted in cultural storytelling and personal perspective.</p>
+              <div class="vibe-tags" style="margin-top: 15px;">
+                <span class="vibe-tag">Experimental</span>
+                <span class="vibe-tag">Ambient</span>
+                <span class="vibe-tag">Narrative</span>
               </div>
             </article>
           </div>
           <div class="col-4">
             <article class="card">
-              <span class="card-meta">Zalvix</span>
-              <h3>The Dancefloor</h3>
-              <p>Melodic Progressive House focus. Precision energy management for the club.</p>
-              <div style="margin-top: 20px;">
-                <a href="https://www.facebook.com/zalv1x/" class="btn btn-accent btn-sm">Explore Links</a>
+              <span class="card-meta">Club & Groove</span>
+              <h3>Zalvix</h3>
+              <p>Melodic Progressive House. Precision energy management for dancefloors. DJ-friendly architecture with emotional depth.</p>
+              <div class="vibe-tags" style="margin-top: 15px;">
+                <span class="vibe-tag">House</span>
+                <span class="vibe-tag">Progressive</span>
+                <span class="vibe-tag">Melodic</span>
               </div>
             </article>
           </div>
           <div class="col-4">
             <article class="card">
-              <span class="card-meta">Luminous Lullabies</span>
-              <h3>The Atmosphere</h3>
-              <p>Cinematic ambient built for meditation, focus, and deep-listening.</p>
-              <div style="margin-top: 20px;">
-                <a href="https://open.spotify.com/artist/2zKWBmG0FeVZ36llQlfjEA" class="btn btn-accent btn-sm">Explore Links</a>
+              <span class="card-meta">Cinematic & Focus</span>
+              <h3>Luminous Lullabies</h3>
+              <p>Ambient soundscapes designed for meditation, focus work, and deep listening. Playlist-friendly with cinematic production values.</p>
+              <div class="vibe-tags" style="margin-top: 15px;">
+                <span class="vibe-tag">Ambient</span>
+                <span class="vibe-tag">Cinematic</span>
+                <span class="vibe-tag">Meditative</span>
               </div>
             </article>
           </div>
         </div>
 
-        <!-- PlayLSD Card -->
         <div class="grid-12">
           <div class="col-6">
             <article class="card">
-              <span class="card-meta">Discovery Ecosystem</span>
-              <h3>PlayLSD</h3>
-              <p>Independent curation engine focusing on taste and artist longevity over transactional placement. Genre-spanning electronic programming, artist discovery workflows, and playlist maintenance.</p>
+              <span class="card-meta">Discovery Platform</span>
+              <h3>PlayLSD Ecosystem</h3>
+              <p>Independent curation engine for electronic music discovery. Artist A&R, playlist programming, and infrastructure for independent releases. Connects taste-led curation with sustainable artist growth.</p>
               <div style="margin-top: 20px;">
-                <a href="https://linktr.ee/khalidbinalam" class="btn btn-accent btn-sm">Explore PlayLSD</a>
+                <a href="https://linktr.ee/khalidbinalam" class="btn btn-accent btn-sm">Explore Playlists</a>
               </div>
             </article>
           </div>
           <div class="col-6">
             <article class="card">
-              <span class="card-meta">Professional</span>
-              <h3>Khalid Bin Alam</h3>
-              <p>Audio engineering, mixing & mastering services. Strategic translation for streaming, clubs, and headphones. Professional portfolio and collaboration inquiries.</p>
+              <span class="card-meta">Services</span>
+              <h3>Audio Engineering</h3>
+              <p>Mixing & mastering specializing in translation-focused production. Streaming optimization, club-ready loudness, and metadata strategy. Serving independent artists and labels.</p>
               <div style="margin-top: 20px;">
-                <a href="https://www.linkedin.com/in/khalid-bin-alam/" class="btn btn-accent btn-sm">View Portfolio</a>
+                <a href="https://www.linkedin.com/in/khalid-bin-alam/" class="btn btn-accent btn-sm">View Work</a>
               </div>
             </article>
           </div>
@@ -553,41 +622,72 @@
       </div>
     </section>
 
-    <!-- NETWORK HUB -->
+    <!-- INDUSTRY CONNECTION -->
     <section id="network">
       <div class="container">
-        <span class="section-label">06 / Connect</span>
-        <h2 class="section-title">Socials, Streaming & Links</h2>
+        <span class="section-label">02 / Industry Connection</span>
+        <h2 class="section-title">Complete Link Hub & Resources</h2>
 
         <div class="grid-12" style="margin-top: 35px;">
+          <!-- Artist Profiles by Vibe -->
           <div class="col-6">
             <div class="panel">
-              <h4 style="font-family: var(--font-display); margin-bottom: 10px;">Artist Socials</h4>
-              <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 18px;">
-                Dedicated profiles for each active identity.
+              <h4 style="font-family: var(--font-display); margin-bottom: 10px;">Artist Profiles</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 18px;">
+                Choose by mood or explore all identities.
               </p>
               <div class="hub-grid">
-                <a href="https://linktr.ee/youmeiyou" class="hub-btn">Apurba (অপূর্ব) <span>&rarr;</span></a>
+                <a href="https://linktr.ee/youmeiyou" class="hub-btn">Apurba (અપ૯ર્બ) <span>&rarr;</span></a>
                 <a href="https://www.facebook.com/zalv1x/" class="hub-btn">Zalvix <span>&rarr;</span></a>
                 <a href="https://open.spotify.com/artist/2zKWBmG0FeVZ36llQlfjEA" class="hub-btn">Luminous Lullabies <span>&rarr;</span></a>
-                <a href="https://www.linkedin.com/in/khalid-bin-alam/" class="hub-btn">Professional <span>&rarr;</span></a>
               </div>
             </div>
           </div>
 
+          <!-- Streaming Ecosystem -->
           <div class="col-6">
             <div class="panel">
-              <h4 style="font-family: var(--font-display); margin-bottom: 10px;">Streaming Platforms</h4>
-              <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 18px;">
-                Listen across all platforms.
+              <h4 style="font-family: var(--font-display); margin-bottom: 10px;">Stream Across Platforms</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 18px;">
+                All releases on major DSPs.
               </p>
               <div class="hub-grid">
                 <a href="https://open.spotify.com/artist/2NgY57feqYSDVqUQTbMZsR" class="hub-btn">Spotify <span>&rarr;</span></a>
                 <a href="https://music.apple.com/us/artist/zalvix/1473215843" class="hub-btn">Apple Music <span>&rarr;</span></a>
                 <a href="#" class="hub-btn">YouTube Music <span>&rarr;</span></a>
                 <a href="#" class="hub-btn">Deezer <span>&rarr;</span></a>
-                <a href="#" class="hub-btn">Amazon Music <span>&rarr;</span></a>
-                <a href="#" class="hub-btn">Bandcamp <span>&rarr;</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-12" style="margin-top: 25px;">
+          <!-- Services & Collaboration -->
+          <div class="col-6">
+            <div class="panel">
+              <h4 style="font-family: var(--font-display); margin-bottom: 10px;">Services & Collaboration</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 18px;">
+                Mix/master, production, curation partnerships.
+              </p>
+              <div class="hub-grid">
+                <a href="https://linktr.ee/khalidbinalam" class="hub-btn">PlayLSD Ecosystem <span>&rarr;</span></a>
+                <a href="https://www.linkedin.com/in/khalid-bin-alam/" class="hub-btn">Audio Engineering <span>&rarr;</span></a>
+                <a href="mailto:hello@khalidbinalam.com" class="hub-btn">Get in Touch <span>&rarr;</span></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Press & Professional -->
+          <div class="col-6">
+            <div class="panel">
+              <h4 style="font-family: var(--font-display); margin-bottom: 10px;">Press & Professional</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 18px;">
+                For media, booking, sync licensing.
+              </p>
+              <div class="hub-grid">
+                <a href="https://www.linkedin.com/in/khalid-bin-alam/" class="hub-btn">LinkedIn Profile <span>&rarr;</span></a>
+                <a href="#" class="hub-btn">Press Kit (EPK) <span>&rarr;</span></a>
+                <a href="mailto:hello@khalidbinalam.com" class="hub-btn">Press Contact <span>&rarr;</span></a>
               </div>
             </div>
           </div>
