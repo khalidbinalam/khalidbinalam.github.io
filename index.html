@@ -10,13 +10,89 @@
   <meta property="og:title" content="Khalid Bin Alam - Producer, Engineer & Curator" />
   <meta property="og:description" content="Independent electronic music professional. Ambient, experimental, club-ready tracks. Mixing/mastering services. PlayLSD curation platform." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://khalidbinalam.com" />
+  <meta property="og:site_name" content="Khalid Bin Alam Portfolio" />
+  <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Khalid Bin Alam - Electronic Artist & Audio Engineer" />
+  <meta name="twitter:description" content="Independent electronic music producer, audio engineer, and PlayLSD curator. Ambient, experimental, and club electronic music." />
+  <meta name="twitter:creator" content="@khalidbinalam" />
+  
+  <!-- Additional SEO Meta Tags -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="language" content="English" />
+  <meta name="revisit-after" content="7 days" />
+  <meta name="distribution" content="global" />
+  <meta name="rating" content="general" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://khalidbinalam.com" />
+  
   <meta name="google-site-verification" content="Ovr7nQPRH8D4gV-niAqdzL3eDwyRNw85_swa_m7KPkE" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@200;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Khalid Bin Alam",
+    "alternateName": ["অপূর্ব", "Apurba", "Zalvix", "Luminous Lullabies"],
+    "description": "Independent electronic music producer, audio engineer, and curator specializing in ambient, experimental, and club electronic music.",
+    "url": "https://khalidbinalam.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/khalid-bin-alam/",
+      "https://linktr.ee/youmeiyou",
+      "https://linktr.ee/khalidbinalam",
+      "https://www.facebook.com/zalv1x/",
+      "https://open.spotify.com/artist/2zKWBmG0FeVZ36llQlfjEA"
+    ],
+    "jobTitle": "Electronic Music Producer & Audio Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Independent"
+    },
+    "knowsAbout": [
+      "Electronic Music Production",
+      "Audio Engineering",
+      "Music Curation",
+      "Ambient Music",
+      "Experimental Electronic",
+      "House Music",
+      "Mixing and Mastering"
+    ],
+    "nationality": {
+      "@type": "Country",
+      "name": "Bangladesh"
+    },
+    "genre": [
+      "Electronic Music",
+      "Ambient",
+      "Experimental",
+      "House",
+      "Downtempo"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Khalid Bin Alam Portfolio",
+    "url": "https://khalidbinalam.com",
+    "description": "Professional portfolio of Khalid Bin Alam - Electronic Artist, Audio Engineer, and Music Curator",
+    "author": {
+      "@type": "Person",
+      "name": "Khalid Bin Alam"
+    },
+    "inLanguage": "en-US"
+  }
+  </script>
 
   <style>
     :root {
@@ -289,10 +365,10 @@
 
   <main>
     <!-- HERO / EPK -->
-    <section class="hero">
+    <section class="hero" itemscope itemtype="https://schema.org/Person">
       <div class="container">
         <span class="hero-label">Producer • Engineer • Curator</span>
-        <h1>Designing Sound Through Systems & Soul.</h1>
+        <h1 itemprop="name">Designing Sound Through Systems & Soul.</h1>
 
         <div style="margin-top: 25px;">
           <div class="vibe-tags">
@@ -305,7 +381,7 @@
           </div>
         </div>
 
-        <p style="margin-top: 35px; max-width: 900px; font-size: 1.25rem; color: var(--text-muted); font-weight: 200;">
+        <p itemprop="description" style="margin-top: 35px; max-width: 900px; font-size: 1.25rem; color: var(--text-muted); font-weight: 200;">
           Independent electronic music professional focused on system translation, atmospheric depth, and infrastructure for the underground.
         </p>
 
@@ -532,12 +608,12 @@
     </section>
 
     <!-- ENGINEERING -->
-    <section id="engineering">
+    <section id="engineering" itemscope itemtype="https://schema.org/Service">
       <div class="container grid-12">
         <div class="col-6">
           <span class="section-label">Engineering</span>
-          <h2 class="section-title">Audio Translation</h2>
-          <p>Strategic mixing and mastering to ensure sonic integrity from headphones to festival systems.</p>
+          <h2 class="section-title" itemprop="name">Audio Translation</h2>
+          <p itemprop="description">Strategic mixing and mastering to ensure sonic integrity from headphones to festival systems.</p>
           <div style="margin-top: 30px;">
             <a href="https://www.linkedin.com/in/khalid-bin-alam/" class="btn">View Portfolio</a>
           </div>
@@ -713,10 +789,10 @@
     </section>
 
     <!-- CONTACT FORM -->
-    <section id="contact">
+    <section id="contact" itemscope itemtype="https://schema.org/ContactPage">
       <div class="container">
         <span class="section-label">Get In Touch</span>
-        <h2 class="section-title">Contact & Collaboration</h2>
+        <h2 class="section-title" itemprop="name">Contact & Collaboration</h2>
         
         <div class="grid-12">
           <div class="col-8">
@@ -734,7 +810,7 @@
             <div class="panel">
               <h4 style="font-family: var(--font-display); margin-bottom: 15px; color: var(--accent);">Quick Contact</h4>
               <ul class="info-list">
-                <li><strong>Email:</strong> hello@khalidbinalam.com</li>
+                <li itemprop="email"><strong>Email:</strong> hello@khalidbinalam.com</li>
                 <li><strong>Response Time:</strong> 24-48 hours</li>
                 <li><strong>Best For:</strong> Collaborations, bookings, sync licensing</li>
               </ul>
