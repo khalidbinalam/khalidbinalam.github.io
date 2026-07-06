@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Khalid Bin Alam | Electronic Artist, Engineer & Curator</title>
-  <meta name="description" content="Khalid Bin Alam - Independent electronic music producer, audio engineer, and PlayLSD curator. Ambient, experimental, and club electronic music. Artist known as Apurba (অপূর্ব), Zalvix, Luminous Lullabies." />
-  <meta name="keywords" content="electronic music producer, ambient music, downtempo, experimental electronic, audio engineer, mixing mastering, music curator, PlayLSD, Apurba, Zalvix, Luminous Lullabies, Bengali artist" />
+  <title>Khalid Bin Alam | Electronic Music Producer, Engineer & Curator</title>
+  <meta name="description" content="Khalid Bin Alam is an independent electronic music producer, audio engineer, and curator from Bangladesh. Specializing in ambient, experimental, downtempo, and club-ready music with PlayLSD curation and mixing/mastering services." />
+  <meta name="keywords" content="Bangladesh electronic music, electronic music producer, audio engineer, ambient music, experimental electronic, downtempo, house music, mixing mastering, music curation, PlayLSD, Apurba, Zalvix, Luminous Lullabies" />
   <meta name="author" content="Khalid Bin Alam" />
-  <meta property="og:title" content="Khalid Bin Alam - Producer, Engineer & Curator" />
-  <meta property="og:description" content="Independent electronic music professional. Ambient, experimental, club-ready tracks. Mixing/mastering services. PlayLSD curation platform." />
+  <meta property="og:title" content="Khalid Bin Alam | Electronic Music Producer & Audio Engineer" />
+  <meta property="og:description" content="Independent electronic music producer, engineer, and curator offering ambient, experimental, and club-ready releases plus PlayLSD curation and audio services." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://khalidbinalam.com" />
   <meta property="og:site_name" content="Khalid Bin Alam Portfolio" />
   <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Khalid Bin Alam - Electronic Artist & Audio Engineer" />
-  <meta name="twitter:description" content="Independent electronic music producer, audio engineer, and PlayLSD curator. Ambient, experimental, and club electronic music." />
+  <meta name="twitter:title" content="Khalid Bin Alam | Electronic Music Producer & Engineer" />
+  <meta name="twitter:description" content="Independent electronic music producer, audio engineer, and curator with ambient, experimental, and club-ready music plus PlayLSD curation services." />
   <meta name="twitter:creator" content="@khalidbinalam" />
   
   <!-- Additional SEO Meta Tags -->
@@ -94,250 +94,7 @@
   }
   </script>
 
-  <style>
-    :root {
-      --bg: #050505;
-      --surface: #0a0a0a;
-      --surface-light: #121212;
-      --border: rgba(255, 255, 255, 0.08);
-      --accent: #a7f3d0;
-      --text-main: #ffffff;
-      --text-muted: #a3a3a3;
-      --font-display: 'Space Grotesk', sans-serif;
-      --font-body: 'Inter', sans-serif;
-      --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 112.5%; }
-    body {
-      background-color: var(--bg);
-      color: var(--text-main);
-      font-family: var(--font-body);
-      line-height: 1.75;
-      font-size: 1.05rem;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-    body.nav-open { overflow: hidden; }
-
-    .container { width: min(1200px, 92vw); margin: 0 auto; }
-
-    /* --- NAVIGATION --- */
-    nav {
-      position: fixed;
-      top: 0; width: 100%; height: 80px;
-      background: rgba(5, 5, 5, 0.8);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-      z-index: 1000;
-      display: flex; align-items: center;
-    }
-
-    /* Centered Header for PC */
-    .nav-inner { 
-      display: flex; 
-      justify-content: center; /* Centered for PC */
-      align-items: center; 
-      width: 100%;
-      position: relative;
-    }
-
-    .logo { 
-      font-family: var(--font-display); 
-      font-weight: 700; 
-      font-size: 1.1rem; 
-      letter-spacing: -1px; 
-      text-transform: uppercase;
-      margin-right: 40px; /* Space between logo and links on PC */
-    }
-    .logo span { color: var(--accent); }
-    
-    .nav-links { display: flex; gap: 30px; align-items: center; }
-    .nav-links a {
-      text-decoration: none; color: var(--text-muted); font-size: 0.82rem;
-      text-transform: uppercase; letter-spacing: 2px; font-weight: 600; transition: var(--transition);
-    }
-    .nav-links a:hover { color: var(--accent); }
-
-    /* Hamburger Button (Mobile Only) */
-    .menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      position: absolute;
-      right: 0;
-      z-index: 1100;
-      padding: 10px;
-    }
-    .menu-btn .line {
-      width: 24px;
-      height: 2px;
-      background-color: var(--text-main);
-      display: block;
-      margin: 5px 0;
-      transition: var(--transition);
-    }
-
-    /* --- HERO --- */
-    .hero { padding: 220px 0 100px; border-bottom: 1px solid var(--border); }
-    .hero-label { color: var(--accent); font-family: var(--font-display); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 5px; margin-bottom: 25px; display: block; }
-    .hero h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 8vw, 5.5rem); line-height: 0.9; font-weight: 700; letter-spacing: -4px; margin-bottom: 35px; }
-    .hero p { max-width: 850px; font-size: 1.25rem; color: var(--text-muted); font-weight: 200; }
-
-    /* --- CONTENT SECTIONS --- */
-    section { padding: 100px 0; border-bottom: 1px solid var(--border); }
-    .section-label { color: var(--accent); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 3px; font-weight: 800; display: block; margin-bottom: 15px; }
-    .section-title { font-family: var(--font-display); font-size: 2.8rem; line-height: 1.1; margin-bottom: 25px; font-weight: 700; }
-    
-    .grid-12 { display: grid; grid-template-columns: repeat(12, 1fr); gap: 30px; }
-    .col-4 { grid-column: span 4; }
-    .col-6 { grid-column: span 6; }
-    .col-8 { grid-column: span 8; }
-
-    /* --- CARDS --- */
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 40px;
-      height: 100%;
-      transition: var(--transition);
-      border-radius: 4px;
-    }
-    .card:hover { border-color: var(--accent); transform: translateY(-8px); }
-    .card h3 { font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 15px; }
-    .card-meta { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); display: block; margin-bottom: 20px; font-weight: 800; }
-    
-    .panel { background: var(--surface-light); border: 1px solid var(--border); padding: 30px; border-radius: 4px; }
-    .info-list { list-style: none; margin-top: 15px; }
-    .info-list li { margin-bottom: 10px; color: var(--text-muted); font-size: 1.04rem; padding-left: 20px; position: relative; }
-    .info-list li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
-
-    /* --- ENGINEERING LIST --- */
-    .spec-item {
-      display: flex; justify-content: space-between; padding: 25px 0; border-bottom: 1px dotted var(--border);
-    }
-    .spec-title { font-family: var(--font-display); font-weight: 700; }
-    .spec-desc { color: var(--text-muted); text-align: right; font-size: 1rem; max-width: 60%; }
-
-    /* --- ECOSYSTEM --- */
-    .ecosystem-box { background: var(--surface-light); padding: 80px; border: 1px solid var(--border); border-radius: 4px; }
-
-    /* --- LINKS HUB --- */
-    .hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 15px; }
-    .hub-btn {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 22px; border: 1px solid var(--border); font-size: 0.95rem;
-      text-transform: uppercase; font-family: var(--font-display); letter-spacing: 1px;
-      text-decoration: none; color: var(--text-main); transition: var(--transition);
-    }
-    .hub-btn:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
-
-    /* Hide Backlink Section */
-    .backlink-section { display: none !important; }
-
-    /* --- UTILITIES --- */
-    .btn {
-      display: inline-flex; align-items: center; padding: 15px 35px;
-      border: 1px solid var(--text-main); font-family: var(--font-display);
-      text-transform: uppercase; font-size: 0.88rem; letter-spacing: 2px;
-      text-decoration: none; color: var(--text-main); transition: var(--transition);
-    }
-    .btn-accent { border-color: var(--accent); color: var(--accent); }
-    .btn-accent:hover { background: var(--accent); color: var(--bg); }
-
-    
-
-    .btn-sm {
-      padding: 10px 18px;
-      font-size: 0.78rem;
-      letter-spacing: 1.6px;
-    }
-    .btn-ghost {
-      border-color: var(--border);
-      color: var(--text-muted);
-    }
-    .btn-ghost:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      background: transparent;
-    }
-    .card-links {
-      margin-top: 18px;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    /* --- VIBE TAGS --- */
-    .vibe-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px; }
-    .vibe-tag {
-      display: inline-flex; align-items: center;
-      padding: 8px 14px; background: var(--surface-light);
-      border: 1px solid var(--border); border-radius: 20px;
-      font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px;
-      color: var(--accent); font-weight: 600;
-    }
-
-    /* --- HERO LINKS SECTION --- */
-    .hero-links-section {
-      margin-top: 60px; padding-top: 50px;
-      border-top: 1px solid var(--border);
-    }
-    .hero-links-section h3 {
-      font-family: var(--font-display); font-size: 1.2rem;
-      text-transform: uppercase; letter-spacing: 3px;
-      margin-bottom: 30px; color: var(--text-muted);
-    }
-    .link-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; }
-    .link-column h4 {
-      font-family: var(--font-display); font-size: 0.95rem;
-      text-transform: uppercase; letter-spacing: 2px;
-      margin-bottom: 15px; color: var(--accent);
-    }
-    .link-column a {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 12px 0; border-bottom: 1px solid var(--border);
-      text-decoration: none; color: var(--text-main);
-      transition: var(--transition);
-    }
-    .link-column a:hover { color: var(--accent); padding-right: 10px; }
-
-/* --- MOBILE STYLES --- */
-    @media (max-width: 1024px) {
-      .nav-inner { justify-content: space-between; }
-      .logo { margin-right: 0; }
-      .menu-btn { display: block; }
-      
-      .nav-links {
-        position: fixed;
-        top: 0; right: -100%;
-        width: 100%; height: 100vh;
-        background: #000;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        gap: 40px;
-        z-index: 1050;
-      }
-      .nav-links.active { right: 0; }
-      .nav-links a { font-size: 1.2rem; }
-
-      /* Cross Icon State */
-      .menu-btn.active .line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-      .menu-btn.active .line:nth-child(2) { opacity: 0; }
-      .menu-btn.active .line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-      .col-4, .col-6, .col-8 { grid-column: span 12; }
-      .spec-item { flex-direction: column; }
-      .spec-desc { text-align: left; max-width: 100%; margin-top: 5px; }
-      .ecosystem-box { padding: 40px; }
-      .hero { padding-top: 150px; }
-    }
-  </style>
+  <link rel="stylesheet" href="/src/styles.css">
 </head>
 <body>
 
@@ -352,13 +109,13 @@
       </button>
 
       <div class="nav-links" id="navLinks">
-        <a href="#about">Core Position</a>
+        <a href="#about">About</a>
         <a href="#aliases">Projects</a>
-        <a href="#engineering">Audio</a>
+        <a href="#engineering">Audio Services</a>
         <a href="#playlsd">Curation</a>
-        <a href="#vision">Future</a>
+        <a href="#vision">Vision</a>
+        <a href="#network">Resources</a>
         <a href="#contact">Contact</a>
-        <a href="#network">Links</a>
       </div>
     </div>
   </nav>
@@ -368,7 +125,7 @@
     <section class="hero" itemscope itemtype="https://schema.org/Person">
       <div class="container">
         <span class="hero-label">Producer • Engineer • Curator</span>
-        <h1 itemprop="name">Designing Sound Through Systems & Soul.</h1>
+        <h1 itemprop="name">Independent electronic music built for listening, performance, and discovery.</h1>
 
         <div style="margin-top: 25px;">
           <div class="vibe-tags">
@@ -382,20 +139,19 @@
         </div>
 
         <p itemprop="description" style="margin-top: 35px; max-width: 900px; font-size: 1.25rem; color: var(--text-muted); font-weight: 200;">
-          Independent electronic music professional focused on system translation, atmospheric depth, and infrastructure for the underground.
+          Independent electronic music professional focused on system translation, atmosphere, and discovery infrastructure for underground artists.
         </p>
 
         <p style="margin-top: 18px; max-width: 900px; font-size: 1rem; color: var(--text-muted);">
-          I operate as a boutique production + curation studio: building catalog-ready music across multiple artist identities, engineering translation-focused masters, and creating discovery infrastructure for independent artists through PlayLSD. My primary artist name is <strong>অপূর্ব (Apurba)</strong>, with additional projects (Zalvix, Luminous Lullabies) separated by purpose, emotional intent, and target audience.
+          I operate as a boutique production and curation studio: building catalog-ready music across multiple artist identities, engineering translation-focused masters, and creating discovery infrastructure through PlayLSD. My primary artist name is <strong>অপূর্ব (Apurba)</strong>, with additional projects <strong>Zalvix</strong> and <strong>Luminous Lullabies</strong> separated by purpose, emotional intent, and target audience.
         </p>
 
-        <!-- CORE OFFERINGS -->
         <div class="grid-12" style="margin-top: 55px;">
           <div class="col-4">
             <div class="panel">
-              <span class="section-label" style="margin-bottom: 8px;">Production</span>
+              <span class="section-label" style="margin-bottom: 8px;">Studio Services</span>
               <ul class="info-list">
-                <li>Ambient & cinematic soundscapes</li>
+                <li>Ambient and cinematic soundscapes</li>
                 <li>Experimental electronic design</li>
                 <li>Melodic club-ready tracks</li>
               </ul>
@@ -403,11 +159,11 @@
           </div>
           <div class="col-4">
             <div class="panel">
-              <span class="section-label" style="margin-bottom: 8px;">Engineering</span>
+              <span class="section-label" style="margin-bottom: 8px;">Audio Engineering</span>
               <ul class="info-list">
-                <li>Mixing & mastering (streaming/club)</li>
-                <li>Translation across playback systems</li>
-                <li>Metadata & release strategy</li>
+                <li>Mixing and mastering for streaming and club systems</li>
+                <li>Playback-translation across headphones, speakers, and clubs</li>
+                <li>Metadata, release strategy, and cycle readiness</li>
               </ul>
             </div>
           </div>
@@ -416,132 +172,107 @@
               <span class="section-label" style="margin-bottom: 8px;">Curation</span>
               <ul class="info-list">
                 <li>PlayLSD playlist programming</li>
-                <li>Artist discovery & A&R</li>
-                <li>Label infrastructure & vision</li>
+                <li>Artist discovery and A&R</li>
+                <li>Independent release infrastructure</li>
               </ul>
             </div>
           </div>
         </div>
 
-        <!-- HERO LINKS SECTION -->
         <div class="hero-links-section">
-          <h3>Quick Access</h3>
+          <h3>Fast access</h3>
           <div class="link-columns">
-            <!-- Artist Links -->
             <div class="link-column">
               <h4>Artist Profiles</h4>
               <a href="https://linktr.ee/youmeiyou">Apurba (অপূর্ব) <span>&rarr;</span></a>
               <a href="https://www.facebook.com/zalv1x/">Zalvix <span>&rarr;</span></a>
               <a href="https://open.spotify.com/artist/2zKWBmG0FeVZ36llQlfjEA">Luminous Lullabies <span>&rarr;</span></a>
             </div>
-
-            <!-- Streaming Platforms -->
-
-            <!-- Services & Projects -->
             <div class="link-column">
               <h4>Services & Ecosystem</h4>
               <a href="https://linktr.ee/khalidbinalam">PlayLSD Curation <span>&rarr;</span></a>
               <a href="https://www.linkedin.com/in/khalid-bin-alam/">Audio Engineering <span>&rarr;</span></a>
-              <a href="#network">All Platforms <span>&rarr;</span></a>
+              <a href="#network">Platform Hub <span>&rarr;</span></a>
             </div>
-
-            <!-- Professional -->
             <div class="link-column">
-              <h4>Professional</h4>
+              <h4>Contact & Press</h4>
               <a href="https://www.linkedin.com/in/khalid-bin-alam/">LinkedIn Portfolio <span>&rarr;</span></a>
-              <a href="mailto:hello@khalidbinalam.com">Contact / Collabs <span>&rarr;</span></a>
+              <a href="mailto:hello@khalidbinalam.com">Email Collaboration <span>&rarr;</span></a>
               <a href="#contact">Contact Form <span>&rarr;</span></a>
               <a href="#network">Press Kit <span>&rarr;</span></a>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- CORE POSITION -->
+    <!-- ABOUT -->
     <section id="about">
-      <div class="container grid-12">
-        <div class="col-8">
-          <span class="section-label">Core Position</span>
-          <h2 class="section-title">Independent Electronic Music Producer &amp; Audio Engineer</h2>
-          <p style="font-size: 1.3rem; font-weight: 200; color: #ddd;">
-            Khalid Bin Alam, also known as অপূর্ব (Apurba), is an independent electronic music producer and audio engineer creating ambient, downtempo, experimental electronic, and club-oriented music.
-            Beyond releases, he builds long-term artist infrastructure through curation, playlist strategy, and independent music discovery systems.
-          </p>
+      <div class="container">
+        <span class="section-label">About</span>
+        <h2 class="section-title">Electronic music production with system-level clarity</h2>
+        <p style="font-size: 1.18rem; font-weight: 300; color: #ddd; max-width: 950px;">
+          Khalid Bin Alam, also known as অপূর্ব (Apurba), is an independent electronic music producer and audio engineer shaping ambient, downtempo, experimental, and club music. His work combines creative depth, technical precision, and independent infrastructure for long-term artist growth.
+        </p>
 
-          <div style="margin-top: 30px;">
+        <div class="grid-12" style="margin-top: 40px;">
+          <div class="col-8">
             <div class="panel">
-              <h4 class="section-label">Identity &amp; Core Position</h4>
+              <span class="section-label" style="margin-bottom: 8px;">Identity</span>
               <ul class="info-list">
-                <li><strong>Producer &amp; Engineer:</strong> Full-cycle music production, sound design, mixing, and mastering with technical precision.</li>
-                <li><strong>Multi-genre Electronic Artist:</strong> Work spanning ambient, downtempo, experimental electronic, and club-focused records.</li>
-                <li><strong>Curator &amp; Ecosystem Builder:</strong> Active in music discovery, playlist culture, and independent artist growth infrastructure.</li>
+                <li><strong>Producer &amp; Engineer:</strong> Full-cycle music creation, sound design, mixing, and mastering.</li>
+                <li><strong>Multi-genre Artist:</strong> Releases spanning ambient, experimental, downtempo, and melodic electronic music.</li>
+                <li><strong>Curator &amp; Builder:</strong> PlayLSD discovery, playlist strategy, and artist ecosystem development.</li>
               </ul>
             </div>
-          </div>
 
-          <div style="margin-top: 25px;">
-            <p style="color: var(--text-muted); max-width: 900px;">
-              His career is built on systems thinking rather than one-off releases, combining creative integrity, audio engineering discipline, and music-industry strategy to grow sustainable artist projects.
-            </p>
-          </div>
-
-          <div style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
-            <a href="#aliases" class="btn btn-accent">Explore Artist Projects</a>
-            <a href="#network" class="btn">View Link Hub</a>
-          </div>
-
-        </div>
-        <div class="col-4">
-          <div class="panel">
-            <h4 class="section-label">Past &amp; Early Career Development</h4>
-            <ul class="info-list">
-              <li>Self-directed growth without institutional backing.</li>
-              <li>Independent learning in music production, sound design, synthesis, and arrangement.</li>
-              <li>Hands-on release cycles that sharpened mixing and mastering skills.</li>
-              <li>Practical understanding of digital platforms, distribution mechanics, and release strategy.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="grid-12" style="margin-top: 35px; grid-column: 1 / -1;">
-          <div class="col-6">
-            <div class="panel">
-              <h4 style="font-family: var(--font-display); margin-bottom: 10px;">Artistic Philosophy</h4>
+            <div class="panel" style="margin-top: 24px;">
+              <span class="section-label" style="margin-bottom: 8px;">Approach</span>
               <p style="color: var(--text-muted); font-size: 0.95rem;">
-                Khalid approaches electronic music as architecture rather than entertainment. Every release is built to shape emotional space with clarity, depth, and long-form listening value.
+                The practice is built on systems thinking rather than one-off releases. Creative integrity, engineering discipline, and strategic infrastructure combine to support sustainable artist projects.
               </p>
               <ul class="info-list">
-                <li>Sound must serve emotional space.</li>
-                <li>Atmosphere matters more than density.</li>
-                <li>Long-form listening outlasts trends.</li>
-                <li>Sonic clarity reflects artistic honesty.</li>
+                <li>Sound should serve emotional space and clarity.</li>
+                <li>Music is designed for long-form listening and performance.</li>
+                <li>Discovery and release systems are built in parallel.</li>
               </ul>
             </div>
           </div>
-          <div class="col-6">
+
+          <div class="col-4">
             <div class="panel">
-              <h4 style="font-family: var(--font-display); margin-bottom: 10px;">Long-Term Direction</h4>
+              <span class="section-label" style="margin-bottom: 8px;">Experience</span>
+              <ul class="info-list">
+                <li>Self-directed, independent career growth.</li>
+                <li>Hands-on expertise in music production and audio engineering.</li>
+                <li>Practical knowledge of digital distribution and release strategy.</li>
+                <li>Artist development through playlists and curated ecosystems.</li>
+              </ul>
+            </div>
+
+            <div class="panel" style="margin-top: 24px;">
+              <span class="section-label" style="margin-bottom: 8px;">Next steps</span>
               <p style="color: var(--text-muted); font-size: 0.95rem;">
-                The mission is to build a coherent catalog and artist ecosystem where music creation, engineering quality, discovery strategy, and independent distribution work as one integrated system.
+                The long-term direction is to evolve from producer into a catalog-centric ecosystem leader, where music creation, engineering, and discovery reinforce each other.
               </p>
               <div style="margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap;">
-                <a href="#vision" class="btn btn-accent">View Growth Metrics</a>
-                <a href="#aliases" class="btn">See Artist Ecosystem</a>
+                <a href="#vision" class="btn btn-accent">Explore Vision</a>
+                <a href="#aliases" class="btn">See Projects</a>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- ARTIST IDENTITIES -->
+    <!-- ARTIST ECOSYSTEM -->
     <section id="aliases">
       <div class="container">
         <span class="section-label">Artist Projects</span>
-        <h2 class="section-title">The Trinity: Separated by Intent & Audience</h2>
+        <h2 class="section-title">The trinity of artist projects built around purpose</h2>
+        <p style="color: var(--text-muted); max-width: 900px; font-size: 1rem; margin-bottom: 35px;">
+          Three artist identities that support different emotional experiences: experimental ambient storytelling, melodic club music, and cinematic music for focus and deep listening.
+        </p>
 
         <div class="grid-12" style="margin-bottom: 40px;">
           <div class="col-4">
@@ -611,9 +342,9 @@
     <section id="engineering" itemscope itemtype="https://schema.org/Service">
       <div class="container grid-12">
         <div class="col-6">
-          <span class="section-label">Engineering</span>
-          <h2 class="section-title" itemprop="name">Audio Translation</h2>
-          <p itemprop="description">Strategic mixing and mastering to ensure sonic integrity from headphones to festival systems.</p>
+          <span class="section-label">Audio Services</span>
+          <h2 class="section-title" itemprop="name">Mixing, mastering, and audio translation</h2>
+          <p itemprop="description">High-fidelity audio services tailored to independent artists and electronic projects, with consistent playback across headphones, speakers, and club systems.</p>
           <div style="margin-top: 30px;">
             <a href="https://www.linkedin.com/in/khalid-bin-alam/" class="btn">View Portfolio</a>
           </div>
@@ -623,9 +354,9 @@
               <h4 class="section-label">Deliverables</h4>
               <ul class="info-list">
                 <li>Mixing (stereo + stems) with revision control</li>
-                <li>Mastering for streaming + club-ready loudness targets</li>
-                <li>Pre-release QC: headroom, clipping, mono compatibility</li>
-                <li>Metadata check: titles, ISRC/UPC readiness, credits</li>
+                <li>Mastering for streaming and club-ready loudness targets</li>
+                <li>Pre-release QC: headroom, clipping and mono compatibility</li>
+                <li>Metadata review: titles, credits, ISRC/UPC readiness</li>
               </ul>
             </div>
           </div>
@@ -695,13 +426,12 @@
       </div>
     </section>
 
-    <!-- INDUSTRY CONNECTION -->
+    <!-- RESOURCE HUB -->
     <section id="network">
       <div class="container">
-        <span class="section-label">Industry Connection</span>
-        <h2 class="section-title">Complete Link Hub & Resources</h2>
+        <span class="section-label">Resources</span>
+        <h2 class="section-title">Platform links, artist profiles, and professional contact</h2>
 
-        <!-- Artist Profiles - Separate Cards -->
         <div style="margin-top: 40px;">
           <h3 style="font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 25px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">Artist Profiles</h3>
           <div class="grid-12">
@@ -738,7 +468,6 @@
           </div>
         </div>
 
-        <!-- Projects & Platforms -->
         <div style="margin-top: 50px;">
           <h3 style="font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 25px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">Projects & Platforms</h3>
           <div class="grid-12">
@@ -747,7 +476,7 @@
                 <span class="card-meta">Curation Ecosystem</span>
                 <h3>PlayLSD</h3>
                 <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px;">
-                  Independent electronic music discovery platform. Curated playlists, artist A&R, and submission infrastructure for underground music.
+                  Independent electronic music discovery platform with curated playlists, artist submission support, and release programming.
                 </p>
                 <div class="card-links">
                   <a href="https://linktr.ee/khalidbinalam" class="btn btn-accent btn-sm">Submit Demo</a>
@@ -760,7 +489,7 @@
                 <span class="card-meta">Event Platform</span>
                 <h3>ToTheNextRave</h3>
                 <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px;">
-                  Upcoming event discovery and ticketing platform connecting ravers to underground electronic music events and festival experiences.
+                  An upcoming platform for underground event discovery, artist connections, and immersive electronic music experiences.
                 </p>
                 <div class="card-links">
                   <a href="#" class="btn btn-accent btn-sm">Coming Soon</a>
@@ -770,21 +499,19 @@
           </div>
         </div>
 
-        <!-- Professional & Personal Links -->
         <div style="margin-top: 50px;">
           <h3 style="font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 25px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">Professional & Personal</h3>
           <div class="panel" style="padding: 40px; border: 1px solid var(--border);">
             <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 25px;">
-              For media inquiries, booking, sync licensing, and professional collaboration.
+              For media inquiries, booking, sync licensing, and creative collaboration.
             </p>
             <div class="hub-grid">
               <a href="https://www.linkedin.com/in/khalid-bin-alam/" class="hub-btn">LinkedIn Portfolio <span>&rarr;</span></a>
               <a href="#" class="hub-btn">Press Kit (EPK) <span>&rarr;</span></a>
-              <a href="mailto:hello@khalidbinalam.com" class="hub-btn">Contact <span>&rarr;</span></a>
+              <a href="mailto:hello@khalidbinalam.com" class="hub-btn">Email Contact <span>&rarr;</span></a>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -847,28 +574,6 @@
     </p>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // SMOOTH MOBILE NAV TOGGLE
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
-    const body = document.body;
-
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
-      navLinks.classList.toggle('active');
-      body.classList.toggle('nav-open');
-    });
-
-    // Close menu when clicking a link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        menuToggle.classList.remove('active');
-        navLinks.classList.remove('active');
-        body.classList.remove('nav-open');
-      });
-    });
-  </script>
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>
